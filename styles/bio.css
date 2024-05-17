@@ -27,13 +27,13 @@
   background-color: #323232;
   width: 100%;
 }
-.nav__logo a {
+.nav__logo a, .footer__logo a {
   color: #FFFFFF;
   text-decoration: none;
   font-size: 1.3rem;
   text-align: center;
 }
-.nav__logo a h3 {
+.nav__logo a h3, .footer__logo a h3 {
   padding-top: 1rem;
 }
 .nav__element {
@@ -86,10 +86,82 @@
 .hero h1 {
   color: #FFFFFF;
   padding-left: 1rem;
+  font-weight: 600;
 }
 
-.bio__img,
+.bio {
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+.bio__img {
+  width: 100%;
+  padding: 1rem 0;
+}
+.bio h2 {
+  font-weight: bold;
+}
+.bio__quote--content, .bio__quote--from {
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+.bio__quote--from {
+  padding-top: 0.3rem;
+}
+.bio__intro h5 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.bio__intro p {
+  font-size: 0.84rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  line-height: 1.2rem;
+}
+
+.photo-gallery {
+  padding-top: 1.5rem;
+  background-color: #FAFAFA;
+  padding: 0 1rem;
+}
+.photo-gallery h2 {
+  font-weight: bold;
+  padding-bottom: 0.2rem;
+}
 .photo-gallery img {
   width: 100%;
-  padding: 1rem;
+  padding: 0.3rem 0;
+}
+
+.footer {
+  background-color: #323232;
+  padding: 1.5rem 1rem;
+  color: #FFFFFF;
+}
+.footer__social h2 {
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+.footer__social--icon {
+  display: flex;
+  gap: 10vw;
+  margin-bottom: 1rem;
+}
+.footer__subtitle {
+  font-size: 0.8rem;
+}
+.footer__subtitle h4 {
+  font-weight: 600;
+  padding: 1rem 0;
+}
+.footer__subtitle--email {
+  padding: 1rem 0;
+}
+.footer__logo {
+  padding: 1.5rem 0 1rem 0;
+}
+.footer__copyright {
+  font-size: 0.7rem;
 }/*# sourceMappingURL=bio.css.map */

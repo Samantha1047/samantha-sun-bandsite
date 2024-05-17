@@ -80,11 +80,105 @@
   h1{
     color:$white;
     padding-left: 1rem;
+    font-weight:600;
   }
 }
 
-.bio__img,
-.photo-gallery img {
-  width: 100%;
-  padding: 1rem;
+.bio{
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+
+  &__img{
+    width: 100%;
+  padding: 1rem 0;
+  }
+  
+  h2{
+    font-weight: bold;
+  }
+
+  &__quote{
+    &--content{
+    font-weight:bold;
+    font-size:0.85rem;
+    text-align: justify;
+    line-height:1.5rem;
+    }
+
+    &--from{
+      @extend .bio__quote--content;
+      padding-top: 0.3rem;
+    }
+  }
+
+  &__intro{
+    h5{
+      margin-top:1.5rem;
+      margin-bottom:1rem;
+      font-weight:600;
+    }
+
+    p{
+      font-size:0.84rem;
+      margin-bottom: 1rem;
+      text-align: left;
+      line-height: 1.2rem;
+    }
+  }
+}
+
+.photo-gallery{
+  padding-top: 1.5rem;
+  background-color:$alabaster;
+  padding: 0 1rem;
+
+  h2{
+    font-weight: bold;
+    padding-bottom:0.2rem;
+  }
+  img{
+    width: 100%;
+    padding:0.3rem 0;
+  }
+
+}
+
+.footer{
+  background-color: $bandsite-black;
+  padding:1.5rem 1rem;
+  color:$white;
+
+  &__social{
+    h2{
+      font-weight:600;
+      padding-bottom: 1rem;
+    }
+    &--icon{
+      display:flex;
+      gap:10vw;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__subtitle{
+    font-size: 0.8rem;
+
+    h4{
+      font-weight:600;
+      padding:1rem 0;
+    }
+
+    &--email{
+      padding:1rem 0;
+    }
+  }
+
+  &__logo{
+    @extend .nav__logo;
+    padding:1.5rem 0 1rem 0;
+  }
+
+  &__copyright{
+    font-size:0.7rem;
+  }
 }
