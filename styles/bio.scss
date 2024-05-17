@@ -2,3 +2,64 @@
 @use "partials/globals";
 @use "partials/variables" as *;
 @use "partials/mixins" as *;
+
+
+.bio{
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+  
+    &__img{
+      width: 100%;
+      padding: 1rem 0;
+    }
+    
+    h2{
+      font-weight: bold;
+    }
+  
+    &__quote{
+      &--content{
+      font-weight:bold;
+      font-size:0.85rem;
+      text-align: justify;
+      line-height:1.5rem;
+      }
+  
+      &--from{
+        @extend .bio__quote--content;
+        padding-top: 0.3rem;
+      }
+    }
+  
+    &__intro{
+      h5{
+        margin-top:1.5rem;
+        margin-bottom:1rem;
+        font-weight:$font-weight-dami;
+      }
+  
+      p{
+        font-size:0.84rem;
+        margin-bottom: 1rem;
+        text-align: left;
+        line-height: 1.2rem;
+      }
+    }
+  }
+  
+  .photo-gallery{
+    padding-top: 1.5rem;
+    background-color:$alabaster;
+    padding: 0 1rem;
+  
+    h2{
+      font-weight: bold;
+      padding-bottom:0.2rem;
+    }
+    img{
+      width: 100%;
+      padding:0.3rem 0;
+    }
+  
+  }
+  
