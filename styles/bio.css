@@ -1,18 +1,18 @@
 @font-face {
   font-family: "AvenirNextLTPro";
-  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype");
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype"), url(../../assets/fonts/AvenirNextLTPro.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "AvenirNextLTPro";
-  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype");
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype"), url(../../assets/fonts/AvenirNextLTProBold.ttf) format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "AvenirNextLTPro";
-  src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf) format("opentype");
+  src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf) format("opentype"), url(../../assets/fonts/AvenirNextLTProDemi.ttf) format("truetype");
   font-weight: 600;
   font-style: normal;
 }
@@ -27,6 +27,13 @@
   background-color: #323232;
   width: 100%;
 }
+@media screen and (min-width: 20rem) {
+  .nav {
+    display: flex;
+    padding: 1.2rem 2rem 0 2rem;
+    align-content: center;
+  }
+}
 .nav__logo a, .footer__logo a {
   color: #FFFFFF;
   text-decoration: none;
@@ -36,10 +43,22 @@
 .nav__logo a h3, .footer__logo a h3 {
   padding-top: 1rem;
 }
+@media screen and (min-width: 20rem) {
+  .nav__logo a h3, .footer__logo a h3 {
+    padding: 0 3.5rem 1.2rem 0;
+    padding-left: 5rem;
+  }
+}
 .nav__element {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   position: relative;
+}
+@media screen and (min-width: 20rem) {
+  .nav__element {
+    gap: 3rem;
+  }
 }
 .nav__element a {
   text-align: center;
@@ -57,39 +76,32 @@
   height: 0.125rem;
   background-color: #FFFFFF;
 }
+@media screen and (min-width: 20rem) {
+  .nav__element a.active::after, .nav__element a:hover::after {
+    left: 2.5rem;
+    width: 100%;
+    height: 0.2rem;
+  }
+}
 .nav__element h4 {
   font-size: 0.8rem;
   padding-bottom: 0.5rem;
+  color: #AFAFAF;
 }
-
-.hero {
-  background-image: url("../../assets/images/hero-bio.jpg");
-  background-size: cover;
-  width: 100%;
-  height: 52vh;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #323232;
-  opacity: 0.5;
-  z-index: -1;
-}
-.hero h1 {
+.nav__element h4.active, .nav__element h4:hover {
   color: #FFFFFF;
-  padding-left: 1rem;
   font-weight: 600;
+}
+@media screen and (min-width: 20rem) {
+  .nav__element h4 {
+    font-size: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0;
+  }
 }
 
 .footer {
+  width: 100%;
   background-color: #323232;
   padding: 1.5rem 1rem;
   color: #FFFFFF;
@@ -120,30 +132,111 @@
   font-size: 0.7rem;
 }
 
+.hero {
+  background-image: url("../../assets/images/hero-bio.jpg");
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #323232;
+  opacity: 0.5;
+  z-index: -1;
+}
+@media screen and (min-width: 20rem) {
+  .hero {
+    height: 100vh;
+    margin-bottom: 3rem;
+  }
+}
+.hero h1 {
+  color: #FFFFFF;
+  padding-left: 1rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 20rem) {
+  .hero h1 {
+    font-size: 3.8rem;
+    padding-left: 2.25rem;
+  }
+}
+
 .bio {
+  width: 100%;
   margin-top: 1.5rem;
   padding: 0 1rem;
+}
+@media screen and (min-width: 20rem) {
+  .bio {
+    padding: 2.25rem;
+  }
 }
 .bio__img {
   width: 100%;
   padding: 1rem 0;
 }
+@media screen and (min-width: 20rem) {
+  .bio__img {
+    height: 85vh;
+    padding: 2.25rem 3.7rem;
+  }
+}
+@media screen and (min-width: 20rem) {
+  .bio__content-wrap {
+    padding: 0 3.7rem;
+  }
+}
 .bio h2 {
-  font-weight: bold;
+  font-weight: 600;
+}
+@media screen and (min-width: 20rem) {
+  .bio h2 {
+    font-size: 2.3rem;
+  }
 }
 .bio__quote--content, .bio__quote--from {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 0.85rem;
   text-align: justify;
   line-height: 1.5rem;
 }
+@media screen and (min-width: 20rem) {
+  .bio__quote--content, .bio__quote--from {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    word-spacing: 0.075rem;
+  }
+}
 .bio__quote--from {
   padding-top: 0.3rem;
 }
+@media screen and (min-width: 20rem) {
+  .bio__quote--from {
+    font-size: 1rem;
+  }
+}
 .bio__intro h5 {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
   font-weight: 600;
+}
+@media screen and (min-width: 20rem) {
+  .bio__intro h5 {
+    font-size: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+  }
 }
 .bio__intro p {
   font-size: 0.84rem;
@@ -151,17 +244,58 @@
   text-align: left;
   line-height: 1.2rem;
 }
+@media screen and (min-width: 20rem) {
+  .bio__intro p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 20rem) {
+  .bio__intro--wrap {
+    display: flex;
+    gap: 2rem;
+    text-align: justify;
+  }
+}
 
 .photo-gallery {
-  padding-top: 1.5rem;
   background-color: #FAFAFA;
-  padding: 0 1rem;
+  padding: 1.5rem 1rem;
+}
+@media screen and (min-width: 20rem) {
+  .photo-gallery {
+    padding: 3rem 2.25rem;
+  }
 }
 .photo-gallery h2 {
+  padding-top: 1.5rem;
   font-weight: bold;
   padding-bottom: 0.2rem;
+}
+@media screen and (min-width: 20rem) {
+  .photo-gallery h2 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    padding-top: 0;
+  }
 }
 .photo-gallery img {
   width: 100%;
   padding: 0.3rem 0;
+}
+@media screen and (min-width: 20rem) {
+  .photo-gallery img {
+    width: 28vw;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 20rem) {
+  .photo-gallery__wrap {
+    padding-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+  }
 }/*# sourceMappingURL=bio.css.map */

@@ -1,5 +1,6 @@
 @use "variables" as *;
 @use "typography" as *;
+@use "mixins" as*;
 
 * {
   box-sizing: border-box;
@@ -12,6 +13,12 @@
 .nav {
   background-color: $bandsite-black;
   width: 100%;
+
+  @include tablet {
+    display:flex;
+    padding: 1.2rem 2rem 0 2rem;
+    align-content: center;
+  }
   
   &__logo a {
     color: $white;
@@ -20,14 +27,24 @@
     text-align: center;
     
     h3 {
-      padding-top: $default-padding-between-content;
+      padding-top: $mobile-padding-between-content;
+
+      @include tablet{
+        padding:0 3.5rem 1.2rem 0;
+        padding-left: 5rem;
+      }
     }
   }
   
   &__element {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     position: relative;
+
+    @include tablet {
+      gap:3rem;
+    } 
     
     a {
       text-align: center;
@@ -45,59 +62,51 @@
         width: 50vw;
         height: 0.125rem;
         background-color: $white;
+
+        @include tablet{
+          left: 2.5rem;
+          width: 100%;
+          height: 0.2rem;
+        }
       }
     }
     
     h4 {
       font-size: 0.8rem;
       padding-bottom: 0.5rem;
+      color:$silver;
+
+      &.active,
+      &:hover{
+        color:$white;
+        font-weight: $font-weight-dami;
+      }
+
+      @include tablet {
+        font-size:1rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0;
+      } 
     }
   }
 }
 
-.hero {
-  background-image: url($hero-background-img);
-  background-size: cover;
-  width: 100%;
-  height: 52vh;
-  position: relative;
-  z-index:1;
-  display:flex;
-  align-items: center;
-
-  &::before{
-    content: "";
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color:$bandsite-black;
-    opacity:0.5; 
-    z-index:-1;
-  }
-
-  h1{
-    color:$white;
-    padding-left: $default-padding-width;
-    font-weight:$font-weight-dami;
-  }
-}
 
 .footer{
+  width:100%;
   background-color: $bandsite-black;
-  padding:$default-padding-height $default-padding-width;
+  padding:$mobile-padding-height $mobile-padding-width;
   color:$white;
 
   &__social{
     h2{
       font-weight:$font-weight-dami;
-      padding-bottom: $default-padding-height;
+      padding-bottom: $mobile-padding-height;
     }
     &--icon{
       display:flex;
       gap:10vw;
-      margin-bottom: $default-padding-height;
+      margin-bottom: $mobile-padding-height;
     }
   }
 
@@ -106,17 +115,17 @@
 
     h4{
       font-weight:$font-weight-dami;
-      padding:$default-padding-between-content 0;
+      padding:$mobile-padding-between-content 0;
     }
 
     &--email{
-      padding:$default-padding-between-content 0;
+      padding:$mobile-padding-between-content 0;
     }
   }
 
   &__logo{
     @extend .nav__logo;
-    padding:$default-padding-height 0 $default-padding-between-content 0;
+    padding:$mobile-padding-height 0 $mobile-padding-between-content 0;
   }
 
   &__copyright{
