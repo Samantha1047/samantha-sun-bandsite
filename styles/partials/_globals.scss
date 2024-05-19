@@ -16,24 +16,26 @@
 
   @include tablet {
     display:flex;
-    padding: 1.2rem 2rem 0 2rem;
+    padding: 1.5rem 2rem 0 2rem;
     align-content: center;
   }
   
-  &__logo a {
+  &__logo{
+     a {
     color: $white;
     text-decoration: none;
     font-size: 1.3rem;
     text-align: center;
     
     h3 {
-      padding-top: $mobile-padding-between-content;
+      padding: $mobile-padding-between-content 0 0.5rem 0;
 
       @include tablet{
         padding:0 3.5rem 1.2rem 0;
       }
     }
-  }
+  }}
+
   
   &__element {
     display: flex;
@@ -47,7 +49,6 @@
     
     a {
       text-align: center;
-      color: $white;
       text-decoration: none;
       position: relative;
       
@@ -62,11 +63,12 @@
         height: 0.125rem;
         background-color: $white;
 
-        @include tablet{
-          left: 2.5rem;
-          width: 100%;
-          height: 0.2rem;
-        }
+
+          @include tablet{
+            width:12vw;
+            left: 52%;
+            height: 0.2rem;
+          }
       }
     }
     
@@ -85,6 +87,7 @@
         font-size:1rem;
         padding-top: 0.2rem;
         padding-bottom: 0;
+        //border-bottom: 0.125rem solid $white;
       } 
     }
   }
@@ -97,15 +100,47 @@
   padding:$mobile-padding-height $mobile-padding-width;
   color:$white;
 
+  @include tablet{
+    padding:$dek-padding-height $dek-padding-width;
+    position:relative;
+  }
+
   &__social{
+
+  @include tablet{
+    display:flex;
+    align-items: center;
+    gap:4vw;
+  }
+
+    img{
+      height:1.5rem;
+    }
+    
     h2{
       font-weight:$font-weight-dami;
       padding-bottom: $mobile-padding-height;
+
+      @include tablet{
+        font-size:2.3rem;
+      }
     }
     &--icon{
       display:flex;
       gap:10vw;
       margin-bottom: $mobile-padding-height;
+
+      @include tablet{
+        gap:5vw;
+      }
+    }
+  }
+
+  &__flex-container{
+    @include tablet{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 
@@ -115,19 +150,47 @@
     h4{
       font-weight:$font-weight-dami;
       padding:$mobile-padding-between-content 0;
+
+      @include tablet{
+        font-size: 0.9rem;
+        padding:$dek-padding-between-content 0;
+      }
+    }
+
+    p{
+      @include tablet{
+        font-size: 0.9rem;
+      }
     }
 
     &--email{
       padding:$mobile-padding-between-content 0;
+
+      @include tablet{
+        font-size: 0.9rem;
+        padding:$dek-padding-between-content 0;
+      }
     }
   }
 
   &__logo{
-    @extend .nav__logo;
+    font-size: 1.3rem;
     padding:$mobile-padding-height 0 $mobile-padding-between-content 0;
+
+    @include tablet{
+      position:absolute;
+      top:$dek-padding-height;
+      right:$dek-padding-width;
+      padding:0;
+      margin-top:0.5rem;
+    }
   }
 
   &__copyright{
     font-size:0.7rem;
+
+    @include tablet{
+      font-size: 0.9rem;
+    }
   }
 }

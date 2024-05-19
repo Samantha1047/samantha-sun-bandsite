@@ -30,21 +30,21 @@
 @media screen and (min-width: 20rem) {
   .nav {
     display: flex;
-    padding: 1.2rem 2rem 0 2rem;
+    padding: 1.5rem 2rem 0 2rem;
     align-content: center;
   }
 }
-.nav__logo a, .footer__logo a {
+.nav__logo a {
   color: #FFFFFF;
   text-decoration: none;
   font-size: 1.3rem;
   text-align: center;
 }
-.nav__logo a h3, .footer__logo a h3 {
-  padding-top: 1rem;
+.nav__logo a h3 {
+  padding: 1rem 0 0.5rem 0;
 }
 @media screen and (min-width: 20rem) {
-  .nav__logo a h3, .footer__logo a h3 {
+  .nav__logo a h3 {
     padding: 0 3.5rem 1.2rem 0;
   }
 }
@@ -61,7 +61,6 @@
 }
 .nav__element a {
   text-align: center;
-  color: #FFFFFF;
   text-decoration: none;
   position: relative;
 }
@@ -77,8 +76,8 @@
 }
 @media screen and (min-width: 20rem) {
   .nav__element a.active::after, .nav__element a:hover::after {
-    left: 2.5rem;
-    width: 100%;
+    width: 12vw;
+    left: 52%;
     height: 0.2rem;
   }
 }
@@ -105,14 +104,47 @@
   padding: 1.5rem 1rem;
   color: #FFFFFF;
 }
+@media screen and (min-width: 20rem) {
+  .footer {
+    padding: 3rem 2.25rem;
+    position: relative;
+  }
+}
+@media screen and (min-width: 20rem) {
+  .footer__social {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+  }
+}
+.footer__social img {
+  height: 1.5rem;
+}
 .footer__social h2 {
   font-weight: 600;
   padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 20rem) {
+  .footer__social h2 {
+    font-size: 2.3rem;
+  }
 }
 .footer__social--icon {
   display: flex;
   gap: 10vw;
   margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 20rem) {
+  .footer__social--icon {
+    gap: 5vw;
+  }
+}
+@media screen and (min-width: 20rem) {
+  .footer__flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 .footer__subtitle {
   font-size: 0.8rem;
@@ -121,20 +153,53 @@
   font-weight: 600;
   padding: 1rem 0;
 }
+@media screen and (min-width: 20rem) {
+  .footer__subtitle h4 {
+    font-size: 0.9rem;
+    padding: 2.25rem 0;
+  }
+}
+@media screen and (min-width: 20rem) {
+  .footer__subtitle p {
+    font-size: 0.9rem;
+  }
+}
 .footer__subtitle--email {
   padding: 1rem 0;
 }
+@media screen and (min-width: 20rem) {
+  .footer__subtitle--email {
+    font-size: 0.9rem;
+    padding: 2.25rem 0;
+  }
+}
 .footer__logo {
+  font-size: 1.3rem;
   padding: 1.5rem 0 1rem 0;
+}
+@media screen and (min-width: 20rem) {
+  .footer__logo {
+    position: absolute;
+    top: 3rem;
+    right: 2.25rem;
+    padding: 0;
+    margin-top: 0.5rem;
+  }
 }
 .footer__copyright {
   font-size: 0.7rem;
+}
+@media screen and (min-width: 20rem) {
+  .footer__copyright {
+    font-size: 0.9rem;
+  }
 }
 
 .hero {
   background-image: url("../../assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: bottom;
+  background-repeat: no-repeat;
   width: 100%;
   height: 30vh;
   position: relative;
