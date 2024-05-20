@@ -14,8 +14,8 @@
           <a href="#bio"><h3>BANDSITE</h3></a>
         </div>
         <div class="nav__element">
-          <a href="#bio"><h4>Biography</h4></a>
-          <a href="#shows"><h4>Shows</h4></a>
+          <a class="nav__element--bio" href="#bio"><h4>Biography</h4></a>
+          <a class="nav__element--shows" href="#shows"><h4>Shows</h4></a>
         </div>
       </nav>
     </header>
@@ -26,7 +26,9 @@
 
     <section class="bio" id="bio">
       <h2>About the Musicians</h2>
-      <img class="bio__img" src="./assets/images/band.jpg" alt="band-photo" />
+      <div class="bio__img">
+        <img src="./assets/images/band.jpg" alt="band-photo" />
+      </div>
       <div class="bio__content-wrap">
         <p class="bio__quote--content">“We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better, back to the drawing board’”</p>
         <p class="bio__quote--from">- Lead vocalist of The Bees Knees</p>

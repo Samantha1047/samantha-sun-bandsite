@@ -19,6 +19,10 @@
     padding: 1.5rem 2rem 0 2rem;
     align-content: center;
   }
+
+  @include desktop{
+    padding: $tab-padding-height $dek-padding-width 0 $dek-padding-width;
+  }
   
   &__logo{
      a {
@@ -32,6 +36,11 @@
 
       @include tablet{
         padding:0 3.5rem 1.2rem 0;
+      }
+
+      @include desktop{
+        font-size:2.3rem;
+        padding-bottom:2rem;
       }
     }
   }}
@@ -65,9 +74,16 @@
 
 
           @include tablet{
-            width:12vw;
+            width:5vw;
             left: 52%;
             height: 0.2rem;
+          }
+
+          @include desktop{
+            bottom: 0;
+            width:6vw;
+            left: 52%;
+            height: 0.4rem;
           }
       }
     }
@@ -89,6 +105,11 @@
         padding-bottom: 0;
         //border-bottom: 0.125rem solid $white;
       } 
+
+      @include desktop{
+        font-size:1.3rem;
+        padding-top: 0.5rem;
+      }
     }
   }
 }
@@ -101,8 +122,12 @@
   color:$white;
 
   @include tablet{
-    padding:$dek-padding-height $dek-padding-width;
+    padding:$tab-padding-height $tab-padding-width;
     position:relative;
+  }
+
+  @include desktop{
+    padding:$tab-padding-height $dek-padding-width;
   }
 
   &__social{
@@ -115,6 +140,10 @@
 
     img{
       height:1.5rem;
+
+      @include desktop{
+        height:2.3rem;
+      }
     }
     
     h2{
@@ -123,6 +152,10 @@
 
       @include tablet{
         font-size:2.3rem;
+      }
+
+      @include desktop{
+        font-size:3.5rem;
       }
     }
     &--icon{
@@ -133,6 +166,11 @@
       @include tablet{
         gap:5vw;
       }
+
+      @include desktop{
+        gap:2.2vw;
+        padding-left: 2rem;
+      }
     }
   }
 
@@ -141,6 +179,11 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+    }
+
+    @include desktop{
+      justify-content: flex-start;
+      gap:5vw;
     }
   }
 
@@ -153,13 +196,21 @@
 
       @include tablet{
         font-size: 0.9rem;
-        padding:$dek-padding-between-content 0;
+        padding:$tab-padding-between-content 0;
+      }
+
+      @include desktop{
+        font-size: 1.5rem;
       }
     }
 
     p{
       @include tablet{
         font-size: 0.9rem;
+      }
+
+      @include desktop{
+        font-size: 1.3rem;
       }
     }
 
@@ -168,7 +219,7 @@
 
       @include tablet{
         font-size: 0.9rem;
-        padding:$dek-padding-between-content 0;
+        padding:$tab-padding-between-content 0;
       }
     }
   }
@@ -179,10 +230,16 @@
 
     @include tablet{
       position:absolute;
-      top:$dek-padding-height;
-      right:$dek-padding-width;
+      top:$tab-padding-height;
+      right:$tab-padding-width;
       padding:0;
       margin-top:0.5rem;
+    }
+
+    @include desktop{
+      font-size:2.3rem;
+      padding-bottom:2rem;
+      right:$dek-padding-width;
     }
   }
 
@@ -191,6 +248,11 @@
 
     @include tablet{
       font-size: 0.9rem;
+    }
+
+    @include desktop{
+      font-size: 1.3rem;
+      margin:$tab-padding-height 0;
     }
   }
 }

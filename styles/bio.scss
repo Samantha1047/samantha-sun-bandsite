@@ -9,7 +9,7 @@
   background-position:bottom;
   background-repeat: no-repeat;
   width: 100%;
-  height: 30vh;
+  height: 15vh;
   position: relative;
   z-index:1;
   display:flex;
@@ -28,8 +28,13 @@
   }
 
   @include tablet{
+    height:70vh;
+    margin-bottom: $tab-padding-height;
+  }
+
+  @include desktop{
     height:100vh;
-    margin-bottom: $dek-padding-height;
+    background-position:top;
   }
 
   h1{
@@ -39,7 +44,12 @@
 
     @include tablet{
       font-size: 3.8rem;
-      padding-left: $dek-padding-width;
+      padding-left: $tab-padding-width;
+    }
+
+    @include desktop{
+      font-size:6.5rem;
+      padding-left:10rem;
     }
   }
 }
@@ -51,31 +61,52 @@
   padding: 0 $mobile-padding-width;
 
   @include tablet{
-    padding: $dek-padding-width;
+    padding: $tab-padding-width;
+  }
+
+  @include desktop{
+    padding: $tab-padding-width $dek-padding-width;
+    margin-bottom: 1.5rem;
   }
   
   &__img{
-    width: 100%;
     padding: $mobile-padding-width 0;
+    overflow: hidden;
 
+    img{
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    
     @include tablet{
-      height:85vh;
-      padding:$dek-padding-width 3.7rem;
+      aspect-ratio: 16 / 9;
+      padding:$tab-padding-width 3.7rem;
     }
+
+    @include desktop{
+      padding:$tab-padding-width 8rem;
+    }
+  }
   }
     
   &__content-wrap{
     @include tablet{
       padding:0 3.7rem;
     }
+    @include desktop{
+      padding:0 8rem;
+    }
   }
 
   h2{
     font-weight: $font-weight-dami;
 
-    @include tablet{
-      font-size: 2.3rem;;
-      }
+      @include tablet{
+        font-size: 2.3rem;;
+        }
+      
+      @include desktop{
+        font-size:3.5rem;
+    }
     }
   
   &__quote{
@@ -90,6 +121,12 @@
       line-height:2rem;
       word-spacing: 0.075rem;
       }
+
+    @include desktop{
+      font-size:2rem;
+      line-height:3rem;
+      padding-right: 20vw;
+    }
     }
   
     &--from{
@@ -98,6 +135,10 @@
 
       @include tablet{
         font-size:1rem;
+      }
+
+      @include desktop{
+        font-size:1.5rem;
       }
     }
   }
@@ -109,8 +150,11 @@
       font-weight:$font-weight-dami;
       @include tablet{
         font-size:1.5rem;
-        padding-top:$dek-padding-height;
-        padding-bottom:$dek-padding-between-content;
+        padding-top:$tab-padding-height;
+        padding-bottom:$tab-padding-between-content;
+      }
+      @include desktop{
+        font-size: 2.5rem;
       }
       }
   
@@ -125,6 +169,10 @@
           line-height: 1.5rem;
           margin-bottom:0;
         }
+        @include desktop{
+          font-size:1.4rem;
+          line-height: 2rem;
+        }
       }
 
         &--wrap{
@@ -132,7 +180,11 @@
           display:flex;
           gap:2rem;
           text-align:justify;
-        }
+          }
+          @include desktop{
+            justify-content: left;
+            padding-right:10rem;
+          }
       }
     }
   }
@@ -142,7 +194,11 @@
     padding: $mobile-padding-height $mobile-padding-width;
 
     @include tablet{
-      padding: $dek-padding-height $dek-padding-width;
+      padding: $tab-padding-height $tab-padding-width;
+    }
+
+    @include desktop{
+      padding:$tab-padding-height $dek-padding-width;
     }
   
     h2{
@@ -154,16 +210,24 @@
         font-size: 2.3rem;
         font-weight:$font-weight-dami;
         padding-top: 0;
-        }
+      }
+      @include desktop{
+        font-size:3.5rem;
+      }
     }
     img{
       width: 100%;
       padding:0.3rem 0;
 
       @include tablet{
-        width: 28vw;
+        width: 27vw;
         padding:0;
       }
+
+      @include desktop{
+        width: 27vw;
+      }
+
     }
 
     &__wrap{
@@ -171,8 +235,15 @@
         padding-top: 1rem;
         display:flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        gap:1.5rem;
+        justify-content: space-between;
+        gap:1.2rem;
+      }
+      @include desktop{
+        padding-top: 1rem;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap:2rem;
       }
     }
   
