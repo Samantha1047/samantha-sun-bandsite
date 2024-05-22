@@ -1,0 +1,4 @@
+#Ignore mac data file
+*.DS_Store
+#Ignore scss map files
+*.css.map
