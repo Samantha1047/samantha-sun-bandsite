@@ -273,14 +273,16 @@
 .hero {
   background-image: url("../../assets/images/hero-shows.jpg");
   background-size: cover;
-  background-position: bottom;
+  background-position: top;
   background-repeat: no-repeat;
   width: 100%;
-  height: 30vh;
+  height: 37vh;
   position: relative;
   z-index: 1;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
+  gap: 1rem;
 }
 .hero::before {
   content: "";
@@ -309,6 +311,7 @@
   color: #FFFFFF;
   padding-left: 1rem;
   font-weight: 600;
+  padding-right: 5rem;
 }
 @media screen and (min-width: 20rem) {
   .hero h1 {
@@ -321,4 +324,22 @@
     font-size: 6.5rem;
     padding-left: 10rem;
   }
+}
+.hero p {
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+}
+.hero iframe {
+  width: 95%;
+  height: 13vh;
+  padding-left: 1rem;
+}
+
+.shows {
+  padding: 1.5rem 1rem;
+}
+.shows h2 {
+  font-weight: 600;
 }/*# sourceMappingURL=shows.css.map */

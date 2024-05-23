@@ -6,14 +6,16 @@
 .hero {
   background-image: url($show-hero-background-img);
   background-size: cover;
-  background-position:bottom;
+  background-position:top;
   background-repeat: no-repeat;
   width: 100%;
-  height: 30vh;
+  height: 37vh;
   position: relative;
   z-index:1;
   display:flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
+  gap:1rem;
 
   &::before{
     content: "";
@@ -41,6 +43,7 @@
     color:$white;
     padding-left: $mobile-padding-width;
     font-weight:$font-weight-dami;
+    padding-right: 5rem;;
 
     @include tablet{
       font-size: 3.8rem;
@@ -51,5 +54,25 @@
       font-size:6.5rem;
       padding-left:10rem;
     }
+  }
+
+  p{
+    padding-top: $mobile-padding-height;
+    padding-left: $mobile-padding-width;
+    color: $white;
+    font-size:0.9rem;
+  }
+
+  iframe{
+    width:95%;
+    height:13vh;
+    padding-left: $mobile-padding-width;
+  }
+}
+
+.shows{
+  padding:$mobile-padding-height $mobile-padding-width;
+  h2{
+    font-weight: $font-weight-dami;
   }
 }
