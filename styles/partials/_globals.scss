@@ -74,14 +74,14 @@
 
 
           @include tablet{
-            width:5vw;
+            width:5rem;
             left: 52%;
             height: 0.2rem;
           }
 
           @include desktop{
             bottom: 0;
-            width:6vw;
+            width:5rem;
             left: 52%;
             height: 0.4rem;
           }

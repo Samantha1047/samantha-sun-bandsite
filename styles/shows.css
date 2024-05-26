@@ -87,7 +87,7 @@
 }
 @media screen and (min-width: 20rem) {
   .nav__element a.active::after, .nav__element a:hover::after {
-    width: 5vw;
+    width: 5rem;
     left: 52%;
     height: 0.2rem;
   }
@@ -95,7 +95,7 @@
 @media screen and (min-width: 120rem) {
   .nav__element a.active::after, .nav__element a:hover::after {
     bottom: 0;
-    width: 6vw;
+    width: 5rem;
     left: 52%;
     height: 0.4rem;
   }
@@ -297,13 +297,13 @@
 }
 @media screen and (min-width: 20rem) {
   .hero {
-    height: 70vh;
+    height: 70vw;
     margin-bottom: 3rem;
   }
 }
 @media screen and (min-width: 120rem) {
   .hero {
-    height: 100vh;
+    height: 100vw;
     background-position: top;
   }
 }
@@ -372,6 +372,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 20rem) {
+  .show button {
+    width: 12rem;
+    height: 2.8rem;
+    position: absolute;
+    right: 0;
+  }
 }
 .show hr {
   border: 0.0063rem solid #E1E1E1;

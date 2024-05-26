@@ -30,12 +30,12 @@
   }
 
   @include tablet{
-    height:70vh;
+    height:70vw;
     margin-bottom: $tab-padding-height;
   }
 
   @include desktop{
-    height:100vh;
+    height:100vw;
     background-position:top;
   }
 
