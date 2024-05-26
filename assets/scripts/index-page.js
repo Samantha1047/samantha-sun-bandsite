@@ -31,14 +31,14 @@ function createElementWithClass(tag, className) {
 
 // Function to create a display element for a given comment
 function createDisplayElement(comment) {
-    const displayEl = createElementWithClass("article", "display");
+    const displayEl = createElementWithClass("article", "display__article");
 
     //create and append avatar element
     const avatarEl = createElementWithClass("img", "display__avatar");
     displayEl.appendChild(avatarEl);
 
     // Create and comment content container
-    const displayContentEl = createElementWithClass("div", "display__content");
+    const displayContentEl = createElementWithClass("div", "display__container");
 
     // Create and append name element
     const nameEl = document.createElement("h4");

@@ -604,4 +604,49 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.display {
+  padding: 0 1rem;
+}
+.display hr {
+  border: 0.0063rem solid #E1E1E1;
+  margin-bottom: 1rem;
+}
+.display__article {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+.display__avatar {
+  background-color: #E1E1E1;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #E1E1E1;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  margin-right: 1rem;
+}
+.display__container {
+  position: relative;
+  width: 100%;
+}
+.display__container h4 {
+  display: inline;
+  font-size: 0.8rem;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.display__date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #AFAFAF;
+  font-size: 0.8rem;
+}
+.display__content {
+  margin: 2rem 0 1rem 0;
+  font-size: 0.79rem;
 }/*# sourceMappingURL=bio.css.map */

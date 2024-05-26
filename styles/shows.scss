@@ -102,12 +102,11 @@
   }
 
   button{
-      @include buttonStyle;
+    @include buttonStyle;
   }
 
   hr{
-    border: .0063rem solid $mercury;
-    margin-bottom: $mobile-padding-between-content;
+    @include separatorStyle;
   }
 
 }

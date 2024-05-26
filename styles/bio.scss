@@ -318,3 +318,58 @@
 
 
   }
+
+  .display{
+    padding:0 $mobile-padding-width;
+
+    hr{
+      @include separatorStyle;
+    }
+
+    &__article{
+      display: flex;
+      width:100%;
+      align-items: flex-start;
+    }
+
+    &__avatar{
+        background-color: $mercury;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 1px solid $mercury;
+        border-radius: 50%;
+        //background-size: cover;
+        flex: 0 0 auto;
+        margin-right: $mobile-padding-width;  
+    }
+
+    &__container{
+      position: relative;
+      width: 100%;
+
+      h4{
+        display: inline;
+        font-size: 0.8rem;
+        font-weight: $font-weight-dami;
+        position: absolute;
+        top:0;
+        left:0;
+      }
+    }
+
+    &__date{
+      position: absolute;
+      top:0;
+      right:0;
+      color:$silver;
+      font-size: 0.8rem;
+    }
+
+    &__content{
+      margin: 2rem 0 1rem 0;
+      font-size: 0.79rem;
+  
+    }
+
+
+  }
