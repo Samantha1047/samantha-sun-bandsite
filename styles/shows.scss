@@ -9,7 +9,7 @@
   background-position:top;
   background-repeat: no-repeat;
   width: 100%;
-  height: 37vh;
+  height: 84vw;;
   position: relative;
   z-index:1;
   display:flex;
@@ -57,7 +57,7 @@
   }
 
   p{
-    padding-top: $mobile-padding-height;
+    padding-top: 2rem;
     padding-left: $mobile-padding-width;
     color: $white;
     font-size:0.9rem;
@@ -65,7 +65,7 @@
 
   iframe{
     width:95%;
-    height:13vh;
+    height:30vw;
     padding-left: $mobile-padding-width;
   }
 }
