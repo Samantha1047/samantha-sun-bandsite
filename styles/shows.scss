@@ -70,9 +70,44 @@
   }
 }
 
-.shows{
-  padding:$mobile-padding-height $mobile-padding-width;
+.show{
+  //padding:$mobile-padding-height $mobile-padding-width;
+  
   h2{
     font-weight: $font-weight-dami;
+    padding-top: $mobile-padding-width;
+    margin:$mobile-padding-height $mobile-padding-width;
   }
+
+  &__container{
+    padding:0 $mobile-padding-width;
+  }
+
+  &__key{
+    font-size: 0.65rem;
+    color:$silver;
+    padding: 0.5rem 0;
+    font-weight: $font-weight-dami;
+  }
+
+  &__date{
+    font-size: 0.9rem;
+    font-weight: $font-weight-dami;
+    padding-bottom: 0.5rem;
+  }
+
+  p{
+    font-size: 0.85rem;
+    padding-bottom: 0.5rem;
+  }
+
+  button{
+      @include buttonStyle;
+  }
+
+  hr{
+    border: .0063rem solid $mercury;
+    margin-bottom: $mobile-padding-between-content;
+  }
+
 }
