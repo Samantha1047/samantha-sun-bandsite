@@ -276,7 +276,7 @@
   background-position: bottom;
   background-repeat: no-repeat;
   width: 100%;
-  height: 30vh;
+  height: 60vw;
   position: relative;
   z-index: 1;
   display: flex;
@@ -466,7 +466,7 @@
 
 .photo-gallery {
   background-color: #FAFAFA;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1rem 0 1rem;
 }
 @media screen and (min-width: 20rem) {
   .photo-gallery {
@@ -480,7 +480,7 @@
 }
 .photo-gallery h2 {
   padding-top: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
   padding-bottom: 0.2rem;
 }
 @media screen and (min-width: 20rem) {
@@ -527,4 +527,77 @@
     justify-content: space-between;
     gap: 2rem;
   }
+}
+
+.comment {
+  padding: 1.5rem 1rem;
+}
+.comment h2 {
+  font-weight: 600;
+  padding-bottom: 0.2rem;
+}
+.comment__form {
+  display: flex;
+  width: 100%;
+}
+.comment__avatar {
+  background-image: url(../assets/images/Mohan-muruge.jpg);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-size: cover;
+  flex: 0 0 auto;
+  margin-right: 1rem;
+  margin-top: 2rem;
+}
+.comment__input {
+  flex: 1;
+  margin-top: 0.6rem;
+}
+.comment label {
+  font-size: 0.7rem;
+  color: #AFAFAF;
+}
+.comment #nameId {
+  width: 100%;
+  background-color: #FAFAFA;
+  border: 0.1rem solid #E1E1E1;
+  border-radius: 0.3rem;
+  padding: 0.625rem;
+}
+.comment #nameId::-moz-placeholder {
+  color: #000000;
+}
+.comment #nameId::placeholder {
+  color: #000000;
+}
+.comment #commentId {
+  width: 100%;
+  height: 30vw;
+  background-color: #FAFAFA;
+  border: 0.1rem solid #E1E1E1;
+  border-radius: 0.3rem;
+}
+.comment #commentId::-moz-placeholder {
+  color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.625rem;
+}
+.comment #commentId::placeholder {
+  color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.625rem;
+}
+.comment__button {
+  width: 100%;
+  height: 13vw;
+  color: #FFFFFF;
+  background-color: #323232;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
 }/*# sourceMappingURL=bio.css.map */
