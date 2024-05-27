@@ -70,6 +70,12 @@ function createElementWithClass(tag, className) {
   return el;
 }
 
+/* //get the viewport width in realtime
+window.addEventListener("resize", function () {
+  const viewportWidth = window.innerWidth;
+  return viewportWidth;
+}); */
+
 //function to create a show detail with a given show info
 function createShowEl(show) {
   const viewportWidth = window.innerWidth;
@@ -159,7 +165,7 @@ function createShowEl(show) {
     tableRow1.appendChild(locationEl);
 
     // Create and append button element
-    const tdEl = document.createElement("td");
+    const tdEl = createElementWithClass("td", "show__last-row");
     const buttonEl = createElementWithClass("button", "show__button");
     buttonEl.innerText = show.button.text;
     buttonEl.type = "submit";
