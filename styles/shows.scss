@@ -6,107 +6,176 @@
 .hero {
   background-image: url($show-hero-background-img);
   background-size: cover;
-  background-position:top;
+  background-position: top;
   background-repeat: no-repeat;
   width: 100%;
-  height: 84vw;;
+  height: 84vw;
   position: relative;
-  z-index:1;
-  display:flex;
+  z-index: 1;
+  display: flex;
   flex-direction: column;
   align-items: left;
-  gap:1rem;
+  gap: 1rem;
 
-  &::before{
+  &::before {
     content: "";
     position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color:$bandsite-black;
-    opacity:0.5; 
-    z-index:-1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bandsite-black;
+    opacity: 0.5;
+    z-index: -1;
   }
 
-  @include tablet{
-    height:70vw;
+  @include tablet {
+    height: 64vw;
     margin-bottom: $tab-padding-height;
+    background-position: center;
   }
 
-  @include desktop{
-    height:100vw;
-    background-position:top;
+  @include desktop {
+    height: 100vw;
+    background-position: top;
   }
 
-  h1{
-    color:$white;
+  h1 {
+    color: $white;
     padding-left: $mobile-padding-width;
-    font-weight:$font-weight-dami;
-    padding-right: 5rem;;
+    font-weight: $font-weight-dami;
+    padding-right: 5rem;
 
-    @include tablet{
+    @include tablet {
       font-size: 3.8rem;
       padding-left: $tab-padding-width;
+      padding-right: 20vw;
     }
 
-    @include desktop{
-      font-size:6.5rem;
-      padding-left:10rem;
+    @include desktop {
+      font-size: 6.5rem;
+      padding-left: 10rem;
     }
   }
 
-  p{
+  p {
     padding-top: 2rem;
     padding-left: $mobile-padding-width;
     color: $white;
-    font-size:0.9rem;
+    font-size: 0.9rem;
+
+    @include tablet {
+      padding-top: 4rem;
+      padding-left: $tab-padding-width;
+      font-size: 1.5rem;
+      font-weight: $font-weight-dami;
+    }
   }
 
-  iframe{
-    width:95%;
-    height:30vw;
+  iframe {
+    width: 95%;
+    height: 30vw;
     padding-left: $mobile-padding-width;
+
+    @include tablet {
+      width: 60%;
+      height: 12rem;
+      padding-left: $tab-padding-width;
+      padding-top: 5vw;
+    }
   }
 }
 
-.show{
+.show {
   //padding:$mobile-padding-height $mobile-padding-width;
-  
-  h2{
+
+  @include tablet {
+    padding: $tab-padding-height $tab-padding-width;
+  }
+
+  &__key-container {
+    @include tablet {
+      padding-left: 1rem;
+      width: 70%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 20vw;
+    }
+  }
+
+  h2 {
     font-weight: $font-weight-dami;
     padding-top: $mobile-padding-width;
-    margin:$mobile-padding-height $mobile-padding-width;
+    margin: $mobile-padding-height $mobile-padding-width;
   }
 
-  &__container{
-    padding:0 $mobile-padding-width;
+  &__container {
+    padding: 0 $mobile-padding-width;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
-  &__key{
+  &__key {
     font-size: 0.65rem;
-    color:$silver;
+    color: $silver;
     padding: 0.5rem 0;
     font-weight: $font-weight-dami;
   }
 
-  &__date{
+  &__date {
     font-size: 0.9rem;
     font-weight: $font-weight-dami;
     padding-bottom: 0.5rem;
   }
 
-  p{
+  p {
     font-size: 0.85rem;
     padding-bottom: 0.5rem;
+
+    @include tablet {
+      text-align: left;
+    }
   }
 
-  button{
-    @include buttonStyle;
+  button {
+    width: 100%;
+    height: 13vw;
+    color: $white;
+    font-size: 1rem;
+    background-color: $bandsite-black;
+    font-weight: $font-weight-dami;
+    border-radius: 0.25rem;
+    margin: $mobile-padding-between-content 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      width: 11rem;
+      height: 2.5rem;
+    }
   }
 
-  hr{
+  hr {
     @include separatorStyle;
   }
 
+  &__table {
+    border-collapse: collapse;
+
+    th,
+    td {
+      text-align: left;
+      padding: 0 1.5rem;
+    }
+
+    td {
+      border-bottom: 0.0625rem solid $silver;
+    }
+  }
 }

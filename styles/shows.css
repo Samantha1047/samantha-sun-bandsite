@@ -40,7 +40,7 @@
   }
 }
 .nav__logo a {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   font-size: 1.3rem;
   text-align: center;
@@ -83,7 +83,7 @@
   transform: translateX(-50%);
   width: 50vw;
   height: 0.125rem;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 @media screen and (min-width: 20rem) {
   .nav__element a.active::after, .nav__element a:hover::after {
@@ -103,10 +103,10 @@
 .nav__element h4 {
   font-size: 0.8rem;
   padding-bottom: 0.5rem;
-  color: #AFAFAF;
+  color: #afafaf;
 }
 .nav__element h4.active, .nav__element h4:hover {
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 600;
 }
 @media screen and (min-width: 20rem) {
@@ -127,7 +127,7 @@
   width: 100%;
   background-color: #323232;
   padding: 1.5rem 1rem;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media screen and (min-width: 20rem) {
   .footer {
@@ -297,8 +297,9 @@
 }
 @media screen and (min-width: 20rem) {
   .hero {
-    height: 70vw;
+    height: 64vw;
     margin-bottom: 3rem;
+    background-position: center;
   }
 }
 @media screen and (min-width: 120rem) {
@@ -308,7 +309,7 @@
   }
 }
 .hero h1 {
-  color: #FFFFFF;
+  color: #ffffff;
   padding-left: 1rem;
   font-weight: 600;
   padding-right: 5rem;
@@ -317,6 +318,7 @@
   .hero h1 {
     font-size: 3.8rem;
     padding-left: 2.25rem;
+    padding-right: 20vw;
   }
 }
 @media screen and (min-width: 120rem) {
@@ -328,15 +330,46 @@
 .hero p {
   padding-top: 2rem;
   padding-left: 1rem;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 0.9rem;
+}
+@media screen and (min-width: 20rem) {
+  .hero p {
+    padding-top: 4rem;
+    padding-left: 2.25rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
 }
 .hero iframe {
   width: 95%;
   height: 30vw;
   padding-left: 1rem;
 }
+@media screen and (min-width: 20rem) {
+  .hero iframe {
+    width: 60%;
+    height: 12rem;
+    padding-left: 2.25rem;
+    padding-top: 5vw;
+  }
+}
 
+@media screen and (min-width: 20rem) {
+  .show {
+    padding: 3rem 2.25rem;
+  }
+}
+@media screen and (min-width: 20rem) {
+  .show__key-container {
+    padding-left: 1rem;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20vw;
+  }
+}
 .show h2 {
   font-weight: 600;
   padding-top: 1rem;
@@ -345,9 +378,16 @@
 .show__container {
   padding: 0 1rem;
 }
+@media screen and (min-width: 20rem) {
+  .show__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .show__key {
   font-size: 0.65rem;
-  color: #AFAFAF;
+  color: #afafaf;
   padding: 0.5rem 0;
   font-weight: 600;
 }
@@ -360,10 +400,15 @@
   font-size: 0.85rem;
   padding-bottom: 0.5rem;
 }
+@media screen and (min-width: 20rem) {
+  .show p {
+    text-align: left;
+  }
+}
 .show button {
   width: 100%;
   height: 13vw;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1rem;
   background-color: #323232;
   font-weight: 600;
@@ -375,13 +420,22 @@
 }
 @media screen and (min-width: 20rem) {
   .show button {
-    width: 12rem;
-    height: 2.8rem;
-    position: absolute;
-    right: 0;
+    width: 11rem;
+    height: 2.5rem;
   }
 }
 .show hr {
-  border: 0.0063rem solid #E1E1E1;
+  border: 0.0063rem solid #e1e1e1;
   margin-bottom: 1rem;
+}
+.show__table {
+  border-collapse: collapse;
+}
+.show__table th,
+.show__table td {
+  text-align: left;
+  padding: 0 1.5rem;
+}
+.show__table td {
+  border-bottom: 0.0625rem solid #afafaf;
 }/*# sourceMappingURL=shows.css.map */

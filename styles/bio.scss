@@ -6,439 +6,436 @@
 .hero {
   background-image: url($bio-hero-background-img);
   background-size: cover;
-  background-position:bottom;
+  background-position: bottom;
   background-repeat: no-repeat;
   width: 100%;
   height: 60vw;
   position: relative;
-  z-index:1;
-  display:flex;
+  z-index: 1;
+  display: flex;
   align-items: center;
 
-  &::before{
+  &::before {
     content: "";
     position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color:$bandsite-black;
-    opacity:0.5; 
-    z-index:-1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bandsite-black;
+    opacity: 0.5;
+    z-index: -1;
   }
 
-  @include tablet{
-    height:60vw;
+  @include tablet {
+    height: 60vw;
     margin-bottom: $tab-padding-height;
   }
 
-  @include desktop{
-    height:60vw;
-    background-position:top;
+  @include desktop {
+    height: 60vw;
+    background-position: top;
   }
 
-  h1{
-    color:$white;
+  h1 {
+    color: $white;
     padding-left: $mobile-padding-width;
-    font-weight:$font-weight-dami;
+    font-weight: $font-weight-dami;
 
-    @include tablet{
+    @include tablet {
       font-size: 3.8rem;
       padding-left: $tab-padding-width;
     }
 
-    @include desktop{
-      font-size:6.5rem;
-      padding-left:10rem;
+    @include desktop {
+      font-size: 6.5rem;
+      padding-left: 10rem;
     }
   }
 }
 
-
-.bio{
-  width:100%;
+.bio {
+  width: 100%;
   margin-top: 1.5rem;
   padding: 0 $mobile-padding-width;
 
-  @include tablet{
+  @include tablet {
     padding: $tab-padding-width;
   }
 
-  @include desktop{
+  @include desktop {
     padding: $tab-padding-width $dek-padding-width;
     margin-bottom: 1.5rem;
   }
-  
-  &__img{
+
+  &__img {
     padding: $mobile-padding-width 0;
     overflow: hidden;
 
-    img{
+    img {
       width: 100%;
       aspect-ratio: 16 / 9;
-    
-    @include tablet{
-      aspect-ratio: 16 / 9;
-      padding:$tab-padding-width 3.7rem;
-    }
 
-    @include desktop{
-      padding:$tab-padding-width 8rem;
-    }
-  }
-  }
-    
-  &__content-wrap{
-    @include tablet{
-      padding:0 3.7rem;
-    }
-    @include desktop{
-      padding:0 8rem;
-    }
-  }
-
-  h2{
-    font-weight: $font-weight-dami;
-
-      @include tablet{
-        font-size: 2.3rem;;
-        }
-      
-      @include desktop{
-        font-size:3.5rem;
-    }
-    }
-  
-  &__quote{
-    &--content{
-    font-weight:$font-weight-dami;
-    font-size:0.85rem;
-    text-align: justify;
-    line-height:1.5rem;
-
-    @include tablet{
-      font-size:1.5rem;
-      line-height:2rem;
-      word-spacing: 0.075rem;
+      @include tablet {
+        aspect-ratio: 16 / 9;
+        padding: $tab-padding-width 3.7rem;
       }
 
-    @include desktop{
-      font-size:2rem;
-      line-height:3rem;
-      padding-right: 20vw;
+      @include desktop {
+        padding: $tab-padding-width 8rem;
+      }
     }
+  }
+
+  &__content-wrap {
+    @include tablet {
+      padding: 0 3.7rem;
     }
-  
-    &--from{
+    @include desktop {
+      padding: 0 8rem;
+    }
+  }
+
+  h2 {
+    font-weight: $font-weight-dami;
+
+    @include tablet {
+      font-size: 2.3rem;
+    }
+
+    @include desktop {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__quote {
+    &--content {
+      font-weight: $font-weight-dami;
+      font-size: 0.85rem;
+      text-align: justify;
+      line-height: 1.5rem;
+
+      @include tablet {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        word-spacing: 0.075rem;
+      }
+
+      @include desktop {
+        font-size: 2rem;
+        line-height: 3rem;
+        padding-right: 20vw;
+      }
+    }
+
+    &--from {
       @extend .bio__quote--content;
       padding-top: 0.3rem;
 
-      @include tablet{
-        font-size:1rem;
+      @include tablet {
+        font-size: 1rem;
       }
 
-      @include desktop{
-        font-size:1.5rem;
+      @include desktop {
+        font-size: 1.5rem;
       }
     }
   }
-  
-  &__intro{
-    h5{
-      padding-top:$mobile-padding-height;
-      padding-bottom:$mobile-padding-between-content;
-      font-weight:$font-weight-dami;
-      @include tablet{
-        font-size:1.5rem;
-        padding-top:$tab-padding-height;
-        padding-bottom:$tab-padding-between-content;
+
+  &__intro {
+    h5 {
+      padding-top: $mobile-padding-height;
+      padding-bottom: $mobile-padding-between-content;
+      font-weight: $font-weight-dami;
+      @include tablet {
+        font-size: 1.5rem;
+        padding-top: $tab-padding-height;
+        padding-bottom: $tab-padding-between-content;
       }
-      @include desktop{
+      @include desktop {
         font-size: 2.5rem;
       }
-      }
-  
-      p{
-        font-size:0.84rem;
-        margin-bottom: 1rem;
-        text-align: left;
-        line-height: 1.2rem;
-
-        @include tablet{
-          font-size:0.9rem;
-          line-height: 1.5rem;
-          margin-bottom:0;
-        }
-        @include desktop{
-          font-size:1.4rem;
-          line-height: 2rem;
-        }
-      }
-
-        &--wrap{
-          @include tablet{
-          display:flex;
-          gap:2rem;
-          text-align:justify;
-          }
-          @include desktop{
-            justify-content: left;
-            padding-right:10rem;
-          }
-      }
-    }
-  }
-  
-  .photo-gallery{
-    background-color:$alabaster;
-    padding: $mobile-padding-height $mobile-padding-width 0 $mobile-padding-width;
-
-    @include tablet{
-      padding: $tab-padding-height $tab-padding-width;
     }
 
-    @include desktop{
-      padding:$tab-padding-height $dek-padding-width;
-    }
-  
-    h2{
-      padding-top: $mobile-padding-height;
-      font-weight: $font-weight-dami;
-      padding-bottom:0.2rem;
-
-      @include tablet{
-        font-size: 2.3rem;
-        font-weight:$font-weight-dami;
-        padding-top: 0;
-      }
-      @include desktop{
-        font-size:3.5rem;
-      }
-    }
-    img{
-      width: 100%;
-      padding:0.3rem 0;
-
-      @include tablet{
-        width: 27vw;
-        padding:0;
-      }
-
-      @include desktop{
-        width: 27vw;
-      }
-
-    }
-
-    &__wrap{
-      @include tablet{
-        padding-top: 1rem;
-        display:flex;
-        flex-wrap: wrap;
-        //justify-content: space-between;
-        gap:1.5rem;
-      }
-      @include desktop{
-        padding-top: 1rem;
-        display:flex;
-        flex-wrap: wrap;
-        //justify-content: space-between;
-        gap:2rem;
-      }
-    }
-  
-  }
-  
-  .comment{
-    padding: $mobile-padding-height $mobile-padding-width;
-
-    @include tablet{
-      padding: $tab-padding-height $tab-padding-width;
+    p {
+      font-size: 0.84rem;
       margin-bottom: 1rem;
-    }
+      text-align: left;
+      line-height: 1.2rem;
 
-    h2{
-      //padding-top: $mobile-padding-height;
-      font-weight: $font-weight-dami;
-      padding-bottom:0.2rem;
-
-      @include tablet{
-        font-size:2.5rem;
-      }
-    }
-
-    &__form{
-      display: flex;
-      width:100%;
-      
-      @include tablet{
-      padding: 3vw 10vw;
-      }
-    }
-
-    &__avatar{
-      background-image: url(../assets/images/Mohan-muruge.jpg);
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-      background-size: cover;
-      flex: 0 0 auto;
-      margin-right: $mobile-padding-width;
-      margin-top: 2rem;
-
-      @include tablet{
-        width: 3rem;
-        height: 3rem;
-        margin-top: 1.5rem;
-      }
-    }
-
-    &__input{
-      flex:1;
-      margin-top:0.6rem;
-
-      @include tablet{
-        position:relative;
-      }
-    }
-
-    label{
-      font-size: 0.7rem;
-      color:$silver;
-
-      @include tablet{
-        font-size: 0.8rem;
-        font-weight: $font-weight-dami;
-      }
-    }
-
-    #nameId{
-      width:100%;
-      background-color: $alabaster;
-      border: .1rem solid $mercury;
-      border-radius: .3rem;
-      padding:0.625rem;
-
-      @include tablet{
-        height:3.5rem;
-      }
-
-      &::placeholder{
-        color:$bandsite-dark-black;
-
-        @include tablet{
-          padding-left:0.5rem;
-        }
-      }
-    }
-
-    #commentId{
-      width:100%;
-      height:30vw;
-      background-color: $alabaster;
-      border: .1rem solid $mercury;
-      border-radius: .3rem;
-
-      @include tablet{
-        height:6rem;
-      }
-
-      &::placeholder{
-        color:$bandsite-dark-black;
-        position: absolute;
-        top:0;
-        left:0;
-        padding:0.625rem;
-
-        @include tablet{
-          top:0.5rem;
-          left:0.5rem;
-        }
-      }
-      }
-
-    &__button{
-      @include buttonStyle;
-    }
-  }
-
-  .display{
-    padding:0 $mobile-padding-width;
-
-    @include tablet{
-      padding: 0 $tab-padding-width;
-    }
-
-    hr{
-      @include separatorStyle;
-    }
-
-    &__article{
-      display: flex;
-      width:100%;
-      align-items: flex-start;
-
-      @include tablet{
-        width:78%;
-        margin: 1.5vw 10vw;
-      }
-    }
-
-    &__avatar{
-        background-color: $mercury;
-        width: 2.5rem;
-        height: 2.5rem;
-        border: 1px solid $mercury;
-        border-radius: 50%;
-        //background-size: cover;
-        flex: 0 0 auto;
-        margin-right: $mobile-padding-width;  
-
-        @include tablet{
-          width: 3rem;
-          height: 3rem;
-          margin-top: 0.3rem;
-        }
-    }
-
-    &__container{
-      position: relative;
-      width: 100%;
-
-      h4{
-        display: inline;
-        font-size: 0.8rem;
-        font-weight: $font-weight-dami;
-        position: absolute;
-        top:0;
-        left:0;
-
-        @include tablet{
-          top:0.3rem;
-        }
-      }
-    }
-
-    &__date{
-      position: absolute;
-      top:0;
-      right:0;
-      color:$silver;
-      font-size: 0.8rem;
-
-      @include tablet{
-        top:0.3rem;
-      }
-    }
-
-    &__content{
-      margin: 2rem 0 1rem 0;
-      font-size: 0.79rem;
-      line-height: 1rem;
-      
-      @include tablet{
-        font-size: 0.87rem;
+      @include tablet {
+        font-size: 0.9rem;
         line-height: 1.5rem;
+        margin-bottom: 0;
+      }
+      @include desktop {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+    }
+
+    &--wrap {
+      @include tablet {
+        display: flex;
+        gap: 2rem;
+        text-align: justify;
+      }
+      @include desktop {
+        justify-content: left;
+        padding-right: 10rem;
       }
     }
   }
+}
+
+.photo-gallery {
+  background-color: $alabaster;
+  padding: $mobile-padding-height $mobile-padding-width 0 $mobile-padding-width;
+
+  @include tablet {
+    padding: $tab-padding-height $tab-padding-width;
+  }
+
+  @include desktop {
+    padding: $tab-padding-height $dek-padding-width;
+  }
+
+  h2 {
+    padding-top: $mobile-padding-height;
+    font-weight: $font-weight-dami;
+    padding-bottom: 0.2rem;
+
+    @include tablet {
+      font-size: 2.3rem;
+      font-weight: $font-weight-dami;
+      padding-top: 0;
+    }
+    @include desktop {
+      font-size: 3.5rem;
+    }
+  }
+  img {
+    width: 100%;
+    padding: 0.3rem 0;
+
+    @include tablet {
+      width: 27vw;
+      padding: 0;
+    }
+
+    @include desktop {
+      width: 27vw;
+    }
+  }
+
+  &__wrap {
+    @include tablet {
+      padding-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      //justify-content: space-between;
+      gap: 1.5rem;
+    }
+    @include desktop {
+      padding-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      //justify-content: space-between;
+      gap: 2rem;
+    }
+  }
+}
+
+.comment {
+  padding: $mobile-padding-height $mobile-padding-width;
+
+  @include tablet {
+    padding: $tab-padding-height $tab-padding-width;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    //padding-top: $mobile-padding-height;
+    font-weight: $font-weight-dami;
+    padding-bottom: 0.2rem;
+
+    @include tablet {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    width: 100%;
+
+    @include tablet {
+      padding: 3vw 10vw;
+    }
+  }
+
+  &__avatar {
+    background-image: url(../assets/images/Mohan-muruge.jpg);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-size: cover;
+    flex: 0 0 auto;
+    margin-right: $mobile-padding-width;
+    margin-top: 2rem;
+
+    @include tablet {
+      width: 3rem;
+      height: 3rem;
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__input {
+    flex: 1;
+    margin-top: 0.6rem;
+
+    @include tablet {
+      position: relative;
+    }
+  }
+
+  label {
+    font-size: 0.7rem;
+    color: $silver;
+
+    @include tablet {
+      font-size: 0.8rem;
+      font-weight: $font-weight-dami;
+    }
+  }
+
+  #nameId {
+    width: 100%;
+    background-color: $alabaster;
+    border: 0.1rem solid $mercury;
+    border-radius: 0.3rem;
+    padding: 0.625rem;
+
+    @include tablet {
+      height: 3.5rem;
+    }
+
+    &::placeholder {
+      color: $bandsite-dark-black;
+
+      @include tablet {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+
+  #commentId {
+    width: 100%;
+    height: 30vw;
+    background-color: $alabaster;
+    border: 0.1rem solid $mercury;
+    border-radius: 0.3rem;
+
+    @include tablet {
+      height: 6rem;
+    }
+
+    &::placeholder {
+      color: $bandsite-dark-black;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.625rem;
+
+      @include tablet {
+        top: 0.5rem;
+        left: 0.5rem;
+      }
+    }
+  }
+
+  &__button {
+    @include buttonStyle;
+  }
+}
+
+.display {
+  padding: 0 $mobile-padding-width;
+
+  @include tablet {
+    padding: 0 $tab-padding-width;
+  }
+
+  hr {
+    @include separatorStyle;
+  }
+
+  &__article {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+
+    @include tablet {
+      width: 78%;
+      margin: 1.5vw 10vw;
+    }
+  }
+
+  &__avatar {
+    background-color: $mercury;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid $mercury;
+    border-radius: 50%;
+    //background-size: cover;
+    flex: 0 0 auto;
+    margin-right: $mobile-padding-width;
+
+    @include tablet {
+      width: 3rem;
+      height: 3rem;
+      margin-top: 0.3rem;
+    }
+  }
+
+  &__container {
+    position: relative;
+    width: 100%;
+
+    h4 {
+      display: inline;
+      font-size: 0.8rem;
+      font-weight: $font-weight-dami;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @include tablet {
+        top: 0.3rem;
+      }
+    }
+  }
+
+  &__date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $silver;
+    font-size: 0.8rem;
+
+    @include tablet {
+      top: 0.3rem;
+    }
+  }
+
+  &__content {
+    margin: 2rem 0 1rem 0;
+    font-size: 0.79rem;
+    line-height: 1rem;
+
+    @include tablet {
+      font-size: 0.87rem;
+      line-height: 1.5rem;
+    }
+  }
+}
