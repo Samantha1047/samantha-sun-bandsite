@@ -33,7 +33,7 @@
   }
 
   @include desktop {
-    height: 60vw;
+    height: 55vw;
     background-position: top;
   }
 
@@ -224,7 +224,7 @@
     }
 
     @include desktop {
-      width: 27vw;
+      width: 25vw;
     }
   }
 
@@ -254,6 +254,11 @@
     margin-bottom: 1rem;
   }
 
+  @include desktop {
+    padding: $tab-padding-height $dek-padding-width;
+    margin-bottom: 1rem;
+  }
+
   h2 {
     //padding-top: $mobile-padding-height;
     font-weight: $font-weight-dami;
@@ -261,6 +266,10 @@
 
     @include tablet {
       font-size: 2.5rem;
+    }
+
+    @include desktop {
+      font-size: 3.5rem;
     }
   }
 
@@ -270,6 +279,10 @@
 
     @include tablet {
       padding: 3vw 10vw;
+    }
+
+    @include tablet {
+      padding: 3vw 20vw;
     }
   }
 
@@ -286,6 +299,12 @@
     @include tablet {
       width: 3rem;
       height: 3rem;
+      margin-top: 1.5rem;
+    }
+
+    @include desktop {
+      width: 5rem;
+      height: 5rem;
       margin-top: 1.5rem;
     }
   }
@@ -307,6 +326,11 @@
       font-size: 0.8rem;
       font-weight: $font-weight-dami;
     }
+
+    @include desktop {
+      font-size: 1.25rem;
+      font-weight: $font-weight-dami;
+    }
   }
 
   #nameId {
@@ -319,12 +343,20 @@
     @include tablet {
       height: 3.5rem;
     }
+    @include desktop {
+      height: 4.5rem;
+    }
 
     &::placeholder {
       color: $bandsite-dark-black;
 
       @include tablet {
         padding-left: 0.5rem;
+      }
+
+      @include desktop {
+        padding-left: 1rem;
+        font-size: 1.3rem;
       }
     }
   }
@@ -351,6 +383,12 @@
         top: 0.5rem;
         left: 0.5rem;
       }
+
+      @include desktop {
+        font-size: 1.3rem;
+        top: 1rem;
+        left: 1rem;
+      }
     }
   }
 
@@ -366,6 +404,10 @@
     padding: 0 $tab-padding-width;
   }
 
+  @include desktop {
+    padding: 0 20vw 3vw 20vw;
+  }
+
   hr {
     @include separatorStyle;
   }
@@ -377,7 +419,7 @@
 
     @include tablet {
       width: 78%;
-      margin: 1.5vw 10vw;
+      margin: 1.5vw 8vw;
     }
   }
 
@@ -396,11 +438,21 @@
       height: 3rem;
       margin-top: 0.3rem;
     }
+
+    @include desktop {
+      width: 5rem;
+      height: 5rem;
+      margin-top: 0rem;
+    }
   }
 
   &__container {
     position: relative;
     width: 100%;
+
+    @include desktop {
+      margin-right: 3vw;
+    }
 
     h4 {
       display: inline;
@@ -412,6 +464,11 @@
 
       @include tablet {
         top: 0.3rem;
+      }
+
+      @include desktop {
+        top: 0.6rem;
+        font-size: 1.2rem;
       }
     }
   }
@@ -426,6 +483,11 @@
     @include tablet {
       top: 0.3rem;
     }
+
+    @include desktop {
+      top: 0.6rem;
+      font-size: 1.2rem;
+    }
   }
 
   &__content {
@@ -436,6 +498,11 @@
     @include tablet {
       font-size: 0.87rem;
       line-height: 1.5rem;
+    }
+    @include desktop {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      margin: 3rem 0 1rem 0;
     }
   }
 }

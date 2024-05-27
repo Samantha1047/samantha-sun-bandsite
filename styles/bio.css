@@ -301,7 +301,7 @@
 }
 @media screen and (min-width: 120rem) {
   .hero {
-    height: 60vw;
+    height: 55vw;
     background-position: top;
   }
 }
@@ -507,7 +507,7 @@
 }
 @media screen and (min-width: 120rem) {
   .photo-gallery img {
-    width: 27vw;
+    width: 25vw;
   }
 }
 @media screen and (min-width: 20rem) {
@@ -536,6 +536,12 @@
     margin-bottom: 1rem;
   }
 }
+@media screen and (min-width: 120rem) {
+  .comment {
+    padding: 3rem 10rem;
+    margin-bottom: 1rem;
+  }
+}
 .comment h2 {
   font-weight: 600;
   padding-bottom: 0.2rem;
@@ -545,6 +551,11 @@
     font-size: 2.5rem;
   }
 }
+@media screen and (min-width: 120rem) {
+  .comment h2 {
+    font-size: 3.5rem;
+  }
+}
 .comment__form {
   display: flex;
   width: 100%;
@@ -552,6 +563,11 @@
 @media screen and (min-width: 20rem) {
   .comment__form {
     padding: 3vw 10vw;
+  }
+}
+@media screen and (min-width: 20rem) {
+  .comment__form {
+    padding: 3vw 20vw;
   }
 }
 .comment__avatar {
@@ -568,6 +584,13 @@
   .comment__avatar {
     width: 3rem;
     height: 3rem;
+    margin-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 120rem) {
+  .comment__avatar {
+    width: 5rem;
+    height: 5rem;
     margin-top: 1.5rem;
   }
 }
@@ -590,6 +613,12 @@
     font-weight: 600;
   }
 }
+@media screen and (min-width: 120rem) {
+  .comment label {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}
 .comment #nameId {
   width: 100%;
   background-color: #fafafa;
@@ -600,6 +629,11 @@
 @media screen and (min-width: 20rem) {
   .comment #nameId {
     height: 3.5rem;
+  }
+}
+@media screen and (min-width: 120rem) {
+  .comment #nameId {
+    height: 4.5rem;
   }
 }
 .comment #nameId::-moz-placeholder {
@@ -614,6 +648,16 @@
   }
   .comment #nameId::placeholder {
     padding-left: 0.5rem;
+  }
+}
+@media screen and (min-width: 120rem) {
+  .comment #nameId::-moz-placeholder {
+    padding-left: 1rem;
+    font-size: 1.3rem;
+  }
+  .comment #nameId::placeholder {
+    padding-left: 1rem;
+    font-size: 1.3rem;
   }
 }
 .comment #commentId {
@@ -652,6 +696,18 @@
     left: 0.5rem;
   }
 }
+@media screen and (min-width: 120rem) {
+  .comment #commentId::-moz-placeholder {
+    font-size: 1.3rem;
+    top: 1rem;
+    left: 1rem;
+  }
+  .comment #commentId::placeholder {
+    font-size: 1.3rem;
+    top: 1rem;
+    left: 1rem;
+  }
+}
 .comment__button {
   width: 100%;
   height: 13vw;
@@ -673,6 +729,14 @@
     right: 0;
   }
 }
+@media screen and (min-width: 120rem) {
+  .comment__button {
+    font-size: 1.5rem;
+    width: 15rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+  }
+}
 
 .display {
   padding: 0 1rem;
@@ -682,9 +746,19 @@
     padding: 0 2.25rem;
   }
 }
+@media screen and (min-width: 120rem) {
+  .display {
+    padding: 0 20vw 3vw 20vw;
+  }
+}
 .display hr {
   border: 0.0063rem solid #e1e1e1;
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 120rem) {
+  .display hr {
+    margin: 0 10vw;
+  }
 }
 .display__article {
   display: flex;
@@ -694,7 +768,7 @@
 @media screen and (min-width: 20rem) {
   .display__article {
     width: 78%;
-    margin: 1.5vw 10vw;
+    margin: 1.5vw 8vw;
   }
 }
 .display__avatar {
@@ -713,9 +787,21 @@
     margin-top: 0.3rem;
   }
 }
+@media screen and (min-width: 120rem) {
+  .display__avatar {
+    width: 5rem;
+    height: 5rem;
+    margin-top: 0rem;
+  }
+}
 .display__container {
   position: relative;
   width: 100%;
+}
+@media screen and (min-width: 120rem) {
+  .display__container {
+    margin-right: 3vw;
+  }
 }
 .display__container h4 {
   display: inline;
@@ -730,6 +816,12 @@
     top: 0.3rem;
   }
 }
+@media screen and (min-width: 120rem) {
+  .display__container h4 {
+    top: 0.6rem;
+    font-size: 1.2rem;
+  }
+}
 .display__date {
   position: absolute;
   top: 0;
@@ -742,6 +834,12 @@
     top: 0.3rem;
   }
 }
+@media screen and (min-width: 120rem) {
+  .display__date {
+    top: 0.6rem;
+    font-size: 1.2rem;
+  }
+}
 .display__content {
   margin: 2rem 0 1rem 0;
   font-size: 0.79rem;
@@ -751,5 +849,12 @@
   .display__content {
     font-size: 0.87rem;
     line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 120rem) {
+  .display__content {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin: 3rem 0 1rem 0;
   }
 }/*# sourceMappingURL=bio.css.map */

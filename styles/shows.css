@@ -428,6 +428,11 @@
   border: 0.0063rem solid #e1e1e1;
   margin-bottom: 1rem;
 }
+@media screen and (min-width: 120rem) {
+  .show hr {
+    margin: 0 10vw;
+  }
+}
 .show__table {
   border-collapse: collapse;
 }

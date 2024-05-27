@@ -31,9 +31,20 @@
     position: absolute;
     right: 0;
   }
+
+  @include desktop() {
+    font-size: 1.5rem;
+    width: 15rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+  }
 }
 
 @mixin separatorStyle {
   border: 0.0063rem solid $mercury;
   margin-bottom: $mobile-padding-between-content;
+
+  @include desktop {
+    margin: 0 10vw;
+  }
 }
