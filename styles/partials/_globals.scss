@@ -1,51 +1,50 @@
 @use "variables" as *;
 @use "typography" as *;
-@use "mixins" as*;
+@use "mixins" as *;
 
 * {
   box-sizing: border-box;
-  margin:0;
-  font-family: 'AvenirNextLTPro';
+  margin: 0;
+  font-family: "AvenirNextLTPro";
   font-weight: normal;
 }
-
 
 .nav {
   background-color: $bandsite-black;
   width: 100%;
 
   @include tablet {
-    display:flex;
+    display: flex;
     padding: 1.5rem 2rem 0 2rem;
     align-content: center;
   }
 
-  @include desktop{
+  @include desktop {
     padding: $tab-padding-height $dek-padding-width 0 $dek-padding-width;
   }
-  
-  &__logo{
-     a {
-    color: $white;
-    text-decoration: none;
-    font-size: 1.3rem;
-    text-align: center;
-    
-    h3 {
-      padding: $mobile-padding-between-content 0 0.5rem 0;
 
-      @include tablet{
-        padding:0 3.5rem 1.2rem 0;
-      }
+  &__logo {
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: 1.3rem;
+      text-align: center;
 
-      @include desktop{
-        font-size:2.3rem;
-        padding-bottom:2rem;
+      h3 {
+        padding: $mobile-padding-between-content 0 0.5rem 0;
+
+        @include tablet {
+          padding: 0 3.5rem 1.2rem 0;
+        }
+
+        @include desktop {
+          font-size: 2.3rem;
+          padding-bottom: 2rem;
+        }
       }
     }
-  }}
+  }
 
-  
   &__element {
     display: flex;
     flex-wrap: wrap;
@@ -53,17 +52,18 @@
     position: relative;
 
     @include tablet {
-      gap:3rem;
-    } 
-    
+      gap: 3rem;
+    }
+
     a {
       text-align: center;
       text-decoration: none;
       position: relative;
-      
+
       &.active::after,
       &:hover::after {
         content: "";
+        color: $white;
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -72,187 +72,184 @@
         height: 0.125rem;
         background-color: $white;
 
+        @include tablet {
+          width: 5rem;
+          left: 52%;
+          height: 0.2rem;
+        }
 
-          @include tablet{
-            width:5rem;
-            left: 52%;
-            height: 0.2rem;
-          }
-
-          @include desktop{
-            bottom: 0;
-            width:5rem;
-            left: 52%;
-            height: 0.4rem;
-          }
+        @include desktop {
+          bottom: 0;
+          width: 5rem;
+          left: 52%;
+          height: 0.4rem;
+        }
       }
     }
-    
+
     h4 {
       font-size: 0.8rem;
       padding-bottom: 0.5rem;
-      color:$silver;
+      color: $silver;
 
       &.active,
-      &:hover{
-        color:$white;
+      &:hover {
+        color: $white;
         font-weight: $font-weight-dami;
       }
 
       @include tablet {
-        font-size:1rem;
+        font-size: 1rem;
         padding-top: 0.2rem;
         padding-bottom: 0;
         //border-bottom: 0.125rem solid $white;
-      } 
+      }
 
-      @include desktop{
-        font-size:1.3rem;
+      @include desktop {
+        font-size: 1.3rem;
         padding-top: 0.5rem;
       }
     }
   }
 }
 
-
-.footer{
-  width:100%;
+.footer {
+  width: 100%;
   background-color: $bandsite-black;
-  padding:$mobile-padding-height $mobile-padding-width;
-  color:$white;
+  padding: $mobile-padding-height $mobile-padding-width;
+  color: $white;
 
-  @include tablet{
-    padding:$tab-padding-height $tab-padding-width;
-    position:relative;
+  @include tablet {
+    padding: $tab-padding-height $tab-padding-width;
+    position: relative;
   }
 
-  @include desktop{
-    padding:$tab-padding-height $dek-padding-width;
+  @include desktop {
+    padding: $tab-padding-height $dek-padding-width;
   }
 
-  &__social{
+  &__social {
+    @include tablet {
+      display: flex;
+      align-items: center;
+      gap: 4vw;
+    }
 
-  @include tablet{
-    display:flex;
-    align-items: center;
-    gap:4vw;
-  }
+    img {
+      height: 1.5rem;
 
-    img{
-      height:1.5rem;
-
-      @include desktop{
-        height:2.3rem;
+      @include desktop {
+        height: 2.3rem;
       }
     }
-    
-    h2{
-      font-weight:$font-weight-dami;
+
+    h2 {
+      font-weight: $font-weight-dami;
       padding-bottom: $mobile-padding-height;
 
-      @include tablet{
-        font-size:2.3rem;
+      @include tablet {
+        font-size: 2.3rem;
       }
 
-      @include desktop{
-        font-size:3.5rem;
+      @include desktop {
+        font-size: 3.5rem;
       }
     }
-    &--icon{
-      display:flex;
-      gap:10vw;
+    &--icon {
+      display: flex;
+      gap: 10vw;
       margin-bottom: $mobile-padding-height;
 
-      @include tablet{
-        gap:5vw;
+      @include tablet {
+        gap: 5vw;
       }
 
-      @include desktop{
-        gap:2.2vw;
+      @include desktop {
+        gap: 2.2vw;
         padding-left: 2rem;
       }
     }
   }
 
-  &__flex-container{
-    @include tablet{
+  &__flex-container {
+    @include tablet {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
     }
 
-    @include desktop{
+    @include desktop {
       justify-content: flex-start;
-      gap:5vw;
+      gap: 5vw;
     }
   }
 
-  &__subtitle{
+  &__subtitle {
     font-size: 0.8rem;
 
-    h4{
-      font-weight:$font-weight-dami;
-      padding:$mobile-padding-between-content 0;
+    h4 {
+      font-weight: $font-weight-dami;
+      padding: $mobile-padding-between-content 0;
 
-      @include tablet{
+      @include tablet {
         font-size: 0.9rem;
-        padding:$tab-padding-between-content 0;
+        padding: $tab-padding-between-content 0;
       }
 
-      @include desktop{
+      @include desktop {
         font-size: 1.5rem;
       }
     }
 
-    p{
-      @include tablet{
+    p {
+      @include tablet {
         font-size: 0.9rem;
       }
 
-      @include desktop{
+      @include desktop {
         font-size: 1.3rem;
       }
     }
 
-    &--email{
-      padding:$mobile-padding-between-content 0;
+    &--email {
+      padding: $mobile-padding-between-content 0;
 
-      @include tablet{
+      @include tablet {
         font-size: 0.9rem;
-        padding:$tab-padding-between-content 0;
+        padding: $tab-padding-between-content 0;
       }
     }
   }
 
-  &__logo{
+  &__logo {
     font-size: 1.3rem;
-    padding:$mobile-padding-height 0 $mobile-padding-between-content 0;
+    padding: $mobile-padding-height 0 $mobile-padding-between-content 0;
 
-    @include tablet{
-      position:absolute;
-      top:$tab-padding-height;
-      right:$tab-padding-width;
-      padding:0;
-      margin-top:0.5rem;
+    @include tablet {
+      position: absolute;
+      top: $tab-padding-height;
+      right: $tab-padding-width;
+      padding: 0;
+      margin-top: 0.5rem;
     }
 
-    @include desktop{
-      font-size:2.3rem;
-      padding-bottom:2rem;
-      right:$dek-padding-width;
+    @include desktop {
+      font-size: 2.3rem;
+      padding-bottom: 2rem;
+      right: $dek-padding-width;
     }
   }
 
-  &__copyright{
-    font-size:0.7rem;
+  &__copyright {
+    font-size: 0.7rem;
 
-    @include tablet{
+    @include tablet {
       font-size: 0.9rem;
     }
 
-    @include desktop{
+    @include desktop {
       font-size: 1.3rem;
-      margin:$tab-padding-height 0;
+      margin: $tab-padding-height 0;
     }
   }
 }

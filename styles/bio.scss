@@ -98,6 +98,7 @@
 
   h2 {
     font-weight: $font-weight-dami;
+    color: $bandsite-black;
 
     @include tablet {
       font-size: 2.3rem;
@@ -108,37 +109,38 @@
     }
   }
 
-  &__quote {
-    &--content {
-      font-weight: $font-weight-dami;
-      font-size: 0.85rem;
-      text-align: justify;
-      line-height: 1.5rem;
+  &__quote-content {
+    font-weight: $font-weight-dami;
+    font-size: 0.85rem;
+    text-align: justify;
+    line-height: 1.5rem;
 
-      @include tablet {
-        font-size: 1.5rem;
-        line-height: 2rem;
-        word-spacing: 0.075rem;
-      }
-
-      @include desktop {
-        font-size: 2rem;
-        line-height: 3rem;
-        padding-right: 20vw;
-      }
+    @include tablet {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      word-spacing: 0.075rem;
     }
 
-    &--from {
-      @extend .bio__quote--content;
-      padding-top: 0.3rem;
+    @include desktop {
+      font-size: 2rem;
+      line-height: 3rem;
+      padding-right: 20vw;
+    }
+  }
 
-      @include tablet {
-        font-size: 1rem;
-      }
+  &__quote-by {
+    font-weight: $font-weight-dami;
+    font-size: 0.85rem;
+    text-align: justify;
+    line-height: 1.5rem;
+    padding-top: 0.3rem;
 
-      @include desktop {
-        font-size: 1.5rem;
-      }
+    @include tablet {
+      font-size: 1rem;
+    }
+
+    @include desktop {
+      font-size: 1.5rem;
     }
   }
 
@@ -201,6 +203,7 @@
   }
 
   h2 {
+    color: $bandsite-black;
     padding-top: $mobile-padding-height;
     font-weight: $font-weight-dami;
     padding-bottom: 0.2rem;

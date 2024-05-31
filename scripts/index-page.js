@@ -121,14 +121,22 @@ function addNewComment(e) {
   //create and append new comment inside the current display
   const displayEl = createDisplayElement(newComment);
   const commentContainer = document.getElementById("displayId");
-  commentContainer.appendChild(displayEl);
-  // Add separator at the bottom of the section
-  commentContainer.appendChild(createSeparator());
-
-  form.reset();
+  commentContainer.insertBefore(displayEl, commentContainer.firstChild);
+  commentContainer.insertBefore(createSeparator(), displayEl);
 }
 
 displayComments(display);
 
 const newCommentForm = document.getElementById("comment__form");
 newCommentForm.addEventListener("submit", addNewComment);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".nav__element a");
+  const currentPage = window.location.pathname.split("/").pop() || "index.html"; // Default to "index.html" if path is empty
+
+  navLinks.forEach((link) => {
+    if (link.getAttribute("href").includes(currentPage)) {
+      link.classList.add("active");
+    }
+  });
+});
