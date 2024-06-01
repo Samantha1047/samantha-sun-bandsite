@@ -112,7 +112,7 @@
   //padding:$mobile-padding-height $mobile-padding-width;
 
   @include tablet {
-    padding: $tab-padding-height $tab-padding-width;
+    padding: 0 $tab-padding-width $tab-padding-height $tab-padding-width;
     width: 100%;
   }
 
@@ -122,21 +122,16 @@
     padding: $tab-padding-height $dek-padding-width;
   }
 
-  /*   &__key-container {
-    @include tablet {
-      padding-left: 1rem;
-      width: 70%;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      gap: 20vw;
-    }
-  } */
-
   h2 {
     font-weight: $font-weight-dami;
     padding-top: $mobile-padding-width;
     margin: $mobile-padding-height $mobile-padding-width;
+
+    @include tablet {
+      font-size: 2.3rem;
+      margin: 0;
+      padding: 0 1rem;
+    }
 
     @include desktop {
       font-size: 3rem;
@@ -156,11 +151,58 @@
     }
   }
 
+  &__El-container {
+    flex: 1;
+  }
+
+  &__El {
+    @include tablet {
+      &:not(:first-child) {
+        .show__El-container {
+          .show__key {
+            display: none;
+          }
+        }
+
+        .show__button {
+          margin-top: 0.2rem;
+        }
+      }
+
+      &:first-child {
+        .show__button {
+          margin-top: 3rem;
+          margin-bottom: 0.2rem;
+        }
+
+        .show__date,
+        p {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+
+    @include desktop {
+      &:not(:first-child) {
+        .show__El-container {
+          .show__key {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
   &__key {
     font-size: 0.65rem;
     color: $silver;
     padding: 0.5rem 0;
     font-weight: $font-weight-dami;
+
+    @include tablet {
+      font-size: 0.8rem;
+      padding: 2rem 0;
+    }
 
     @include desktop {
       font-size: 1rem;

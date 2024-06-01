@@ -1,5 +1,5 @@
 //Array of current show data
-const showData = [
+/* const showData = [
   {
     date: "Mon Sept 09 2024",
     venue: "Ronald Lane",
@@ -59,13 +59,27 @@ const showData = [
       link: "",
     },
   },
-];
+]; */
+
+import { BandSiteApi } from "./band-site-api.js";
+const api = new BandSiteApi("fcb695a7-499c-4df9-a259-10354602d489");
 
 // Function to create an element with a specified class
 function createElementWithClass(tag, className) {
   const el = document.createElement(tag);
   el.classList.add(className);
   return el;
+}
+
+//Function to convert timestap into "Wed Dec 18 2024" format
+function dateConvert(timestamp) {
+  const date = new Date(timestamp);
+  return date.toLocaleDateString("en-US", {
+    weekday: "short",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
 }
 
 //function to create a show detail with a given show info
@@ -76,35 +90,41 @@ function createShowEl(show) {
   const showDataContainer = createElementWithClass("div", "show__container");
 
   // Create and append date element
+  const dateContainter = createElementWithClass("div", "show__El-container");
   const dateTitle = createElementWithClass("h6", "show__key");
   dateTitle.innerText = "DATE";
-  showDataContainer.appendChild(dateTitle);
+  dateContainter.appendChild(dateTitle);
 
   const dateEl = createElementWithClass("p", "show__date");
-  dateEl.innerText = show.date;
-  showDataContainer.appendChild(dateEl);
+  dateEl.innerText = dateConvert(show.date);
+  dateContainter.appendChild(dateEl);
+  showDataContainer.appendChild(dateContainter);
 
   // Create and append venue element
+  const venueContainter = createElementWithClass("div", "show__El-container");
   const venueTitle = createElementWithClass("h6", "show__key");
   venueTitle.innerText = "VENUE";
-  showDataContainer.appendChild(venueTitle);
+  venueContainter.appendChild(venueTitle);
 
   const venueEl = document.createElement("p");
-  venueEl.innerText = show.venue;
-  showDataContainer.appendChild(venueEl);
+  venueEl.innerText = show.place;
+  venueContainter.appendChild(venueEl);
+  showDataContainer.appendChild(venueContainter);
 
   // Create and append location element
+  const locationContainter = createElementWithClass("div", "show__El-container");
   const locationTitle = createElementWithClass("h6", "show__key");
   locationTitle.innerText = "LOCATION";
-  showDataContainer.appendChild(locationTitle);
+  locationContainter.appendChild(locationTitle);
 
   const locationEl = document.createElement("p");
   locationEl.innerText = show.location;
-  showDataContainer.appendChild(locationEl);
+  locationContainter.appendChild(locationEl);
+  showDataContainer.appendChild(locationContainter);
 
   // Create and append button element
   const buttonEl = createElementWithClass("button", "show__button");
-  buttonEl.innerText = show.button.text;
+  buttonEl.innerText = "BUY TICKETS";
   buttonEl.type = "submit";
   showDataContainer.appendChild(buttonEl);
 
@@ -136,7 +156,19 @@ function displayShow(shows) {
   }
 }
 
-displayShow(showData);
+//fetch showdata from API
+async function renderShows() {
+  try {
+    const showData = await api.getShows();
+    console.log(showData);
+    displayShow(showData);
+  } catch (err) {
+    console.error("Failed to load shows:", err);
+  }
+}
+
+renderShows();
+//displayShow(showData);
 
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav__element a");

@@ -77,7 +77,7 @@ function displayComments(display) {
 }
 
 //fetch comments from API
-async function RenderComments() {
+async function renderComments() {
   try {
     const comments = await api.getComments();
     console.log(comments);
@@ -87,40 +87,7 @@ async function RenderComments() {
   }
 }
 
-RenderComments();
-/* //Function to get current date
-function currentDate() {
-  const currentDate = new Date();
-  const year = currentDate.getFullYear();
-  const month = (currentDate.getMonth() + 1).toString().padStart(2, "0");
-  const day = currentDate.getDate().toString().padStart(2, "0");
-  const formattedDate = `${day}/${month}/${year}`;
-  return formattedDate;
-} */
-
-/* //Function to add a new comment
-function addNewComment(e) {
-  e.preventDefault();
-  const form = e.target;
-  const name = form.name.value;
-  //const avatar = form.avatar.value;
-  //const date = form.date.value;
-  const content = form.comment.value;
-
-  //Create a new comment content
-  const newComment = {
-    name: name,
-    avatar: createElementWithClass("img", "display__avatar"),
-    date: currentDate(),
-    content: content,
-  };
-
-  //create and append new comment inside the current display
-  const displayEl = createDisplayElement(newComment);
-  const commentContainer = document.getElementById("displayId");
-  commentContainer.insertBefore(displayEl, commentContainer.firstChild);
-  commentContainer.insertBefore(createSeparator(), displayEl);
-} */
+renderComments();
 
 //Funtion to add a new comment using axios
 async function addNewComment(e) {

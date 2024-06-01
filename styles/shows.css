@@ -380,21 +380,9 @@
   }
 }
 
-.show {
-  /*   &__key-container {
-    @include tablet {
-      padding-left: 1rem;
-      width: 70%;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      gap: 20vw;
-    }
-  } */
-}
 @media screen and (min-width: 48rem) {
   .show {
-    padding: 3rem 2.25rem;
+    padding: 0 2.25rem 3rem 2.25rem;
     width: 100%;
   }
 }
@@ -409,6 +397,13 @@
   font-weight: 600;
   padding-top: 1rem;
   margin: 1.5rem 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .show h2 {
+    font-size: 2.3rem;
+    margin: 0;
+    padding: 0 1rem;
+  }
 }
 @media screen and (min-width: 80rem) {
   .show h2 {
@@ -428,11 +423,41 @@
     align-items: center;
   }
 }
+.show__El-container {
+  flex: 1;
+}
+@media screen and (min-width: 48rem) {
+  .show__El:not(:first-child) .show__El-container .show__key {
+    display: none;
+  }
+  .show__El:not(:first-child) .show__button {
+    margin-top: 0.2rem;
+  }
+  .show__El:first-child .show__button {
+    margin-top: 3rem;
+    margin-bottom: 0.2rem;
+  }
+  .show__El:first-child .show__date,
+  .show__El:first-child p {
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .show__El:not(:first-child) .show__El-container .show__key {
+    display: none;
+  }
+}
 .show__key {
   font-size: 0.65rem;
   color: #afafaf;
   padding: 0.5rem 0;
   font-weight: 600;
+}
+@media screen and (min-width: 48rem) {
+  .show__key {
+    font-size: 0.8rem;
+    padding: 2rem 0;
+  }
 }
 @media screen and (min-width: 80rem) {
   .show__key {
