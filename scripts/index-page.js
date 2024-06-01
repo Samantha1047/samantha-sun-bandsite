@@ -1,35 +1,20 @@
-//array to hold current display comments
-const display = [
-  {
-    name: "Victor Pinto",
-    avatar: {},
-    date: "11/02/2023",
-    content:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
-
-  {
-    name: "Christina Cabrera",
-    avatar: {},
-    date: "10/28/2023",
-    content:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-
-  {
-    name: "Isaac Tadesse",
-    avatar: {},
-    date: "10/20/2023",
-    content:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-];
+import { BandSiteApi } from "./band-site-api.js";
+const api = new BandSiteApi("fcb695a7-499c-4df9-a259-10354602d489");
 
 // Function to create an element with a specified class
 function createElementWithClass(tag, className) {
   const el = document.createElement(tag);
   el.classList.add(className);
   return el;
+}
+
+//Function to convert timestap into MM/DD/YYYY
+function dateConvert(timestamp) {
+  const date = new Date(timestamp);
+  const month = (date.getMonth() + 1).toString().padStart(2, "0");
+  const day = date.getDate().toString().padStart(2, "0");
+  const year = date.getFullYear();
+  return `${month}/${day}/${year}`;
 }
 
 // Function to create a display element for a given comment
@@ -50,12 +35,12 @@ function createDisplayElement(comment) {
 
   //Create and append name element
   const dateEl = createElementWithClass("p", "display__date");
-  dateEl.innerText = comment.date;
+  dateEl.innerText = dateConvert(comment.timestamp);
   displayContentEl.appendChild(dateEl);
 
   //Create and append content element
   const contentEl = createElementWithClass("p", "display__content");
-  contentEl.innerText = comment.content;
+  contentEl.innerText = comment.comment;
   displayContentEl.appendChild(contentEl);
 
   //Append comment content container to display element
@@ -91,7 +76,19 @@ function displayComments(display) {
   commentContainer.appendChild(createSeparator());
 }
 
-//Function to get current date
+//fetch comments from API
+async function RenderComments() {
+  try {
+    const comments = await api.getComments();
+    console.log(comments);
+    displayComments(comments);
+  } catch (err) {
+    console.error("Failed to load comments:", err);
+  }
+}
+
+RenderComments();
+/* //Function to get current date
 function currentDate() {
   const currentDate = new Date();
   const year = currentDate.getFullYear();
@@ -99,9 +96,9 @@ function currentDate() {
   const day = currentDate.getDate().toString().padStart(2, "0");
   const formattedDate = `${day}/${month}/${year}`;
   return formattedDate;
-}
+} */
 
-//Function to add a new comment
+/* //Function to add a new comment
 function addNewComment(e) {
   e.preventDefault();
   const form = e.target;
@@ -123,9 +120,36 @@ function addNewComment(e) {
   const commentContainer = document.getElementById("displayId");
   commentContainer.insertBefore(displayEl, commentContainer.firstChild);
   commentContainer.insertBefore(createSeparator(), displayEl);
+} */
+
+//Funtion to add a new comment using axios
+async function addNewComment(e) {
+  e.preventDefault();
+  const form = e.target;
+  const name = form.name.value;
+  const content = form.comment.value;
+
+  const newComment = {
+    name: name,
+    comment: content,
+  };
+
+  try {
+    const response = await api.postComment(newComment);
+    const addedComment = response;
+    const displayEl = createDisplayElement(addedComment);
+    const commentContainer = document.getElementById("displayId");
+    const separatorEl = createSeparator();
+    commentContainer.insertBefore(separatorEl, commentContainer.firstChild);
+    commentContainer.insertBefore(displayEl, separatorEl.nextSibling);
+    form.reset();
+  } catch (err) {
+    console.error("Fail to post comment:", err);
+  }
 }
 
-displayComments(display);
+//displayComments(display);
+//DisplayComments();
 
 const newCommentForm = document.getElementById("comment__form");
 newCommentForm.addEventListener("submit", addNewComment);
