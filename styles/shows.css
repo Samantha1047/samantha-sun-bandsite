@@ -55,7 +55,7 @@
 }
 @media screen and (min-width: 80rem) {
   .nav__logo a h3 {
-    font-size: 2.3rem;
+    font-size: 1.5rem;
     padding-bottom: 2rem;
   }
 }
@@ -74,6 +74,13 @@
   text-align: center;
   text-decoration: none;
   position: relative;
+}
+.nav__element a.active h4 {
+  color: #ffffff;
+  font-weight: 600;
+}
+.nav__element a:hover h4 {
+  color: #ffffff;
 }
 .nav__element a.active::after, .nav__element a:hover::after {
   content: "";
@@ -98,17 +105,18 @@
     bottom: 0;
     width: 5rem;
     left: 52%;
-    height: 0.4rem;
+    height: 0.2rem;
   }
 }
 .nav__element h4 {
   font-size: 0.8rem;
   padding-bottom: 0.5rem;
   color: #afafaf;
-}
-.nav__element h4.active, .nav__element h4:hover {
-  color: #ffffff;
-  font-weight: 600;
+  /* &.active,
+  &:hover {
+    color: $white;
+    font-weight: $font-weight-dami;
+  } */
 }
 @media screen and (min-width: 48rem) {
   .nav__element h4 {
@@ -119,8 +127,8 @@
 }
 @media screen and (min-width: 80rem) {
   .nav__element h4 {
-    font-size: 1.3rem;
-    padding-top: 0.5rem;
+    font-size: 1rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -151,11 +159,6 @@
 .footer__social img {
   height: 1.5rem;
 }
-@media screen and (min-width: 80rem) {
-  .footer__social img {
-    height: 2.3rem;
-  }
-}
 .footer__social h2 {
   font-weight: 600;
   padding-bottom: 1.5rem;
@@ -167,7 +170,7 @@
 }
 @media screen and (min-width: 80rem) {
   .footer__social h2 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 }
 .footer__social--icon {
@@ -214,7 +217,9 @@
 }
 @media screen and (min-width: 80rem) {
   .footer__subtitle h4 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
   }
 }
 @media screen and (min-width: 48rem) {
@@ -224,7 +229,7 @@
 }
 @media screen and (min-width: 80rem) {
   .footer__subtitle p {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
 .footer__subtitle--email {
@@ -233,7 +238,7 @@
 @media screen and (min-width: 48rem) {
   .footer__subtitle--email {
     font-size: 0.9rem;
-    padding: 2.25rem 0;
+    padding: 1.5rem 0 2.25rem 0;
   }
 }
 .footer__logo {
@@ -251,7 +256,7 @@
 }
 @media screen and (min-width: 80rem) {
   .footer__logo {
-    font-size: 2.3rem;
+    font-size: 1.3rem;
     padding-bottom: 2rem;
     right: 10rem;
   }
@@ -266,8 +271,8 @@
 }
 @media screen and (min-width: 80rem) {
   .footer__copyright {
-    font-size: 1.3rem;
-    margin: 3rem 0;
+    font-size: 1rem;
+    margin-top: 0.8rem;
   }
 }
 
