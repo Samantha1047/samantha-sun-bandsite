@@ -48,11 +48,13 @@
   width: 100%;
 
   @include tablet {
-    margin: 0 10vw;
+    width: calc(100% - 14.5rem);
+    margin: 0 7.25rem;
   }
 
   @include desktop {
-    margin: 0 10vw;
+    width: calc(100% - 42rem);
+    margin: 0 21rem;
   }
 }
 

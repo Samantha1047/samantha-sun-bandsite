@@ -423,26 +423,21 @@
 }
 
 .display {
-  padding: 0 $mobile-padding-width;
-
-  @include tablet {
-    padding: 0 2.25rem;
-  }
-
-  @include desktop {
-    padding: 0 20vw 3vw 20vw;
-  }
-
   &__article {
     display: flex;
     width: 100%;
     align-items: flex-start;
     margin-top: 1rem;
+    padding: 0 $mobile-padding-width;
 
     @include tablet {
       width: 78%;
-      //margin: 1.5vw 8vw;
       margin: 1rem 5rem;
+      padding: 0 2.25rem;
+    }
+
+    @include desktop {
+      padding: 0 7rem 0 17rem;
     }
   }
 
