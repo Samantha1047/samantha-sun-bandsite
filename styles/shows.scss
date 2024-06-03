@@ -184,18 +184,6 @@
           }
         }
       }
-
-      &:first-child {
-        .show__button {
-          margin-top: 3rem;
-          margin-bottom: 0.2rem;
-        }
-
-        .show__date,
-        p {
-          padding-bottom: 2rem;
-        }
-      }
     }
 
     @include desktop {
@@ -285,5 +273,25 @@
 
   hr {
     @include separatorStyleForShow;
+  }
+}
+
+.show-key-preset {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.65rem;
+    color: $silver;
+    padding: 0 1rem;
+    font-weight: $font-weight-dami;
+    height: 2rem;
+    margin-top: 2rem;
+
+    &__El {
+      flex: 1;
+    }
   }
 }

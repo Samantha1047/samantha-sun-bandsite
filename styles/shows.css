@@ -454,14 +454,6 @@
   .show__El:not(:first-child) .show__button:hover {
     background-color: #000000;
   }
-  .show__El:first-child .show__button {
-    margin-top: 3rem;
-    margin-bottom: 0.2rem;
-  }
-  .show__El:first-child .show__date,
-  .show__El:first-child p {
-    padding-bottom: 2rem;
-  }
 }
 @media screen and (min-width: 80rem) {
   .show__El:not(:first-child) .show__El-container .show__key {
@@ -550,5 +542,25 @@
 @media screen and (min-width: 48rem) {
   .show hr {
     margin-bottom: 0;
+  }
+}
+
+.show-key-preset {
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  .show-key-preset {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.65rem;
+    color: #afafaf;
+    padding: 0 1rem;
+    font-weight: 600;
+    height: 2rem;
+    margin-top: 2rem;
+  }
+  .show-key-preset__El {
+    flex: 1;
   }
 }/*# sourceMappingURL=shows.css.map */
