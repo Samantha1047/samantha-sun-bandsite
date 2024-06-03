@@ -121,6 +121,7 @@ async function addNewComment(e) {
 const newCommentForm = document.getElementById("comment__form");
 newCommentForm.addEventListener("submit", addNewComment);
 
+//Check the current url and set active stste for nav element
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav__element a");
   const currentPage = window.location.pathname.split("/").pop() || "index.html"; // Default to "index.html" if path is empty

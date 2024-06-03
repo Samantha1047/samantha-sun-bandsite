@@ -369,6 +369,13 @@
         font-size: 1rem;
       }
     }
+
+    &:focus {
+      border-color: $bandsite-black;
+    }
+    &input:invalid {
+      border-color: $error-color;
+    }
   }
 
   #commentId {
@@ -400,6 +407,14 @@
         left: 1rem;
       }
     }
+
+    &:focus {
+      border-color: $bandsite-black;
+    }
+
+    &input:invalid {
+      border-color: $error-color;
+    }
   }
 
   &__button {
@@ -422,6 +437,7 @@
     display: flex;
     width: 100%;
     align-items: flex-start;
+    margin-top: 1rem;
 
     @include tablet {
       width: 78%;
@@ -431,7 +447,7 @@
   }
 
   hr {
-    margin: 0 10vw;
+    @include separatorStyleForBio;
   }
 
   &__avatar {

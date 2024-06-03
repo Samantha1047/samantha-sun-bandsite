@@ -282,7 +282,7 @@
   background-position: top;
   background-repeat: no-repeat;
   width: 100%;
-  height: 84vw;
+  height: 18rem;
   position: relative;
   z-index: 1;
   display: flex;
@@ -311,15 +311,15 @@
 @media screen and (min-width: 80rem) {
   .hero {
     height: 50vw;
-    background-position: top;
-    background-position-y: -13rem;
+    background-position: center;
+    background-position-y: -9rem;
   }
 }
 .hero h1 {
   color: #ffffff;
   padding-left: 1rem;
   font-weight: 600;
-  padding-right: 5rem;
+  padding-right: 30%;
 }
 @media screen and (min-width: 48rem) {
   .hero h1 {
@@ -330,9 +330,9 @@
 }
 @media screen and (min-width: 80rem) {
   .hero h1 {
-    font-size: 6.5rem;
+    font-size: 3.8rem;
     padding-left: 10rem;
-    width: 70%;
+    width: 58rem;
     position: absolute;
     top: 40%;
   }
@@ -354,20 +354,20 @@
 @media screen and (min-width: 80rem) {
   .hero p {
     padding-left: 10rem;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 600;
     position: absolute;
-    top: 25%;
+    top: 22%;
   }
 }
 .hero iframe {
-  width: 95%;
-  height: 30vw;
+  width: 19rem;
+  height: 7rem;
   padding-left: 1rem;
 }
 @media screen and (min-width: 48rem) {
   .hero iframe {
-    width: 60%;
+    width: 28rem;
     height: 12rem;
     padding-left: 2.25rem;
     padding-top: 5vw;
@@ -375,11 +375,11 @@
 }
 @media screen and (min-width: 80rem) {
   .hero iframe {
-    width: 30%;
-    height: 13rem;
+    width: 29rem;
+    height: 9rem;
     position: absolute;
     top: 40%;
-    left: 60%;
+    left: 55%;
     border-radius: 0.8rem;
     padding: 0;
   }
@@ -393,9 +393,7 @@
 }
 @media screen and (min-width: 80rem) {
   .show {
-    display: flex;
-    justify-content: space-between;
-    padding: 3rem 10rem;
+    padding: 3rem 10rem 2rem 10rem;
   }
 }
 .show h2 {
@@ -412,10 +410,17 @@
 }
 @media screen and (min-width: 80rem) {
   .show h2 {
-    font-size: 3rem;
+    font-size: 2.3rem;
     margin: 0;
     padding: 0;
     margin-top: -2rem;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .show__display {
+    margin-left: 25%;
+    margin-top: -3rem;
   }
 }
 .show__container {
@@ -432,11 +437,22 @@
   flex: 1;
 }
 @media screen and (min-width: 48rem) {
+  .show__El:not(:first-child) :hover {
+    background-color: #e1e1e1;
+    cursor: pointer;
+  }
   .show__El:not(:first-child) .show__El-container .show__key {
-    display: none;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
   }
   .show__El:not(:first-child) .show__button {
-    margin-top: 0.2rem;
+    flex: none;
+  }
+  .show__El:not(:first-child) .show__button:hover {
+    background-color: #000000;
   }
   .show__El:first-child .show__button {
     margin-top: 3rem;
@@ -449,7 +465,15 @@
 }
 @media screen and (min-width: 80rem) {
   .show__El:not(:first-child) .show__El-container .show__key {
-    display: none;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  .show__El:not(:first-child) .show__El-container :hover {
+    background-color: #e1e1e1;
+    cursor: pointer;
   }
 }
 .show__key {
@@ -466,7 +490,7 @@
 }
 @media screen and (min-width: 80rem) {
   .show__key {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 .show__date {
@@ -486,6 +510,7 @@
 @media screen and (min-width: 48rem) {
   .show p {
     text-align: left;
+    padding-bottom: 0;
   }
 }
 .show button {
@@ -501,6 +526,10 @@
   justify-content: center;
   align-items: center;
 }
+.show button:hover {
+  background-color: #000000;
+  cursor: pointer;
+}
 @media screen and (min-width: 48rem) {
   .show button {
     width: 11rem;
@@ -509,42 +538,17 @@
 }
 @media screen and (min-width: 80rem) {
   .show button {
-    width: 15rem;
-    height: 3.5rem;
-    font-size: 1.3rem;
-    border-radius: 0.5rem;
+    width: 10rem;
+    height: 2.5rem;
   }
 }
 .show hr {
-  border: 0.0063rem solid #e1e1e1;
+  border: 1px solid #e1e1e1;
   margin-bottom: 1rem;
+  width: 100%;
 }
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 48rem) {
   .show hr {
-    margin: 0 10vw;
+    margin-bottom: 0;
   }
-}
-.show__table {
-  border-collapse: collapse;
-}
-.show__table th,
-.show__table td {
-  text-align: left;
-  padding: 0 10vw 0 0;
-}
-@media screen and (min-width: 80rem) {
-  .show__table th,
-  .show__table td {
-    font-size: 1.3rem;
-  }
-}
-.show__table td {
-  border-bottom: 0.0625rem solid #afafaf;
-}
-
-.show__last-row {
-  padding-left: 10vw;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 0;
 }/*# sourceMappingURL=shows.css.map */
