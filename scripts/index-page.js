@@ -115,9 +115,6 @@ async function addNewComment(e) {
   }
 }
 
-//displayComments(display);
-//DisplayComments();
-
 const newCommentForm = document.getElementById("comment__form");
 newCommentForm.addEventListener("submit", addNewComment);
 
